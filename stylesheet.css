@@ -1,0 +1,54 @@
+body {
+  font-family: "montserrat";
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+#top-wrapper {
+  background-image: url(../img/top.png);
+  width: 1280px;
+  height: 806px;
+}
+
+#header-left {
+  float: left;
+  margin: 36px 0 0 40px;
+}
+
+#header-left h1 {
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+#header-left p {
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
+  margin-top: 6px;
+  font-size: 12px;
+  letter-spacing: 6px;
+}
+
+#header-right li {
+  float: right;
+  font-size: 18px;
+  margin: 32px 35px 0 35px;
+}
+
+#first-child span {
+ display: block;
+ border-bottom: solid 1px #000000;
+ margin-top: 4px;
+}
+
+.container h1 {
+ margin: 0 0 20px 139px;
+ font-size: 64px;
+}
+
+.container p {
+ margin: 20px 0 162px 142px;
+ font-size: 24px;
+ letter-spacing: : 9px;
+}

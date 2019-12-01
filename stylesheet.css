@@ -9,7 +9,8 @@ li {
 
 .container {
   background-color: red;
-  width: 1260px;
+  background-size: cover;
+  width: 1280px;
   height: 806px;
 }
 

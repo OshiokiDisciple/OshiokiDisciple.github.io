@@ -7,43 +7,58 @@ li {
   list-style: none;
 }
 
-#top-wrapper {
-  background-image: url(../img/top.png);
-  width: 1280px;
+.container {
+  background-color: red;
+  width: 1260px;
   height: 806px;
 }
 
-#header-left {
+.header-left {
+  color :#ffffff;
   float: left;
-  margin: 36px 0 0 40px;
+  margin-right: 300px;
 }
 
-#header-left h1 {
+.header-left h2 {
   font-size: 20px;
   letter-spacing: 10px;
+  margin: 33px 0 0 40px;
 }
 
-#header-left p {
+.header-left p {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
-  margin-top: 6px;
-  font-size: 12px;
+  margin: 6px 0 0 40px;
+  font-size : 12px;
   letter-spacing: 6px;
 }
 
-#header-right li {
-  float: left;
+.header-right {
+  display: flex;
   font-size: 18px;
-  margin: 32px 35px 0 35px;
+  margin-left: 300px;
 }
 
-#header-right ul li:first-child {
-border-bottom: solid 1px #707070;
+.header-right li {
+  margin: 29px 35px 0 35px;
 }
 
-.container h1 {
-  font-size :64px;
+.header-right li:first-child {
+border-bottom :8px solid #000000;
+padding-bottom: 4px;
 }
 
-.container p {
-  font-size: 24px;
+.contents {
+  margin: 271px 0 162px 142px;
+}
+
+.contents h1 {
+  font-size: 64px;
+  margin-bottom: 26px;
+}
+
+.contents p {
+  margin-top: 15px;
+  color: #ffffff;
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
+  letter-spacing: 12px;
 }

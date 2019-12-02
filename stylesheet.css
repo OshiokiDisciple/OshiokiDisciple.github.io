@@ -9,7 +9,6 @@ li {
 
 .container {
   background-color: red;
-  background-size: cover;
   height: 806px;
 }
 
@@ -39,7 +38,7 @@ li {
 }
 
 .header-right li {
-  margin: 29px 35px 0 35px;
+  margin: 29px 35px 0 0;
 }
 
 .header-right li:first-child {

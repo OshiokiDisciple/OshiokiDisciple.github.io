@@ -7,7 +7,7 @@ li {
   list-style: none;
 }
 
-.container {
+.header-container {
   background-image: url("img/top.jpg");
   background-size: cover;
   height: 806px;
@@ -70,18 +70,33 @@ padding-bottom: 4px;
   letter-spacing: 12px;
 }
 
-.contents {
-  margin: 271px 0 162px 142px;
+.about {
+  display: flex;
+  justify-content: center;
 }
 
-.contents h1 {
-  font-size: 64px;
-  margin-bottom: 26px;
+.about-contents {
+  border: 1px solid #707070;
+  background-color: #f0f0f0;
+  width: 30%;
+  padding: 77px 56px 44px 57px;
+  margin: 186px 46px 115px 138px;
 }
 
-.contents p {
-  margin-top: 15px;
-  color: #ffffff;
+.about-contents h1 {
+  font-size: 48px;
+  border-bottom: 5px solid #0a0a0a;
+  padding-bottom: 10px;
+}
+
+.about-contents h2,p {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
-  letter-spacing: 12px;
+}
+
+.about-contents h2 {
+  font-size: 24px;
+}
+
+.about-contents p {
+  font-size: 16px;
 }

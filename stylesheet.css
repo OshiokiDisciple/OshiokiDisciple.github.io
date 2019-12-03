@@ -8,8 +8,14 @@ li {
 }
 
 .container {
-  background-color: red;
+  background-image: url("img/top.jpg");
+  background-size: cover;
   height: 806px;
+}
+
+header {
+  width: 100%;
+  position: relative;
 }
 
 .header-left {
@@ -33,17 +39,35 @@ li {
 
 .header-right {
   display: flex;
+  justify-content: flex-end;
   font-size: 18px;
-  margin-left: 300px;
 }
 
 .header-right li {
-  margin: 29px 35px 0 0;
+  margin: 29px 35px 0 35px;
 }
 
 .header-right li:first-child {
 border-bottom :8px solid #000000;
 padding-bottom: 4px;
+}
+
+.header-contents {
+  position: absolute;
+  top: 360px;
+  left: 138px;
+}
+
+.header-contents h1 {
+  font-size: 64px;
+  margin-bottom: 26px;
+}
+
+.header-contents p {
+  margin-top: 15px;
+  color: #ffffff;
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
+  letter-spacing: 12px;
 }
 
 .contents {

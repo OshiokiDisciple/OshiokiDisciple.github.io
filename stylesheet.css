@@ -1,3 +1,35 @@
+/*
+html5doctor.com Reset stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr,th,td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  }
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 body {
   font-family: "montserrat";
   margin: 0;
@@ -24,7 +56,7 @@ header {
   margin-right: 300px;
 }
 
-.header-left h2 {
+.logo {
   font-size: 20px;
   letter-spacing: 10px;
   margin: 33px 0 0 40px;
@@ -83,33 +115,30 @@ padding-bottom: 4px;
 
 .about {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 1004px;
 }
 
 .about-contents {
   border: 1px solid #707070;
   background-color: #f0f0f0;
-  width: 30%;
-  padding: 77px 56px 44px 57px;
-  margin: 186px 46px 115px 138px;
 }
 
 .about-photo img {
   height: auto;
-  margin: 245px 0 0 0;
 }
 
-.about-contents h1 {
+.about-contents h2 {
   font-size: 48px;
   border-bottom: 5px solid #0a0a0a;
   padding-bottom: 10px;
 }
 
-.about-contents h2,p {
+.about-contents h3,p {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
 }
 
-.about-contents h2 {
+.about-contents h3 {
   font-size: 24px;
 }
 

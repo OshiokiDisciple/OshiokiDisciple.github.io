@@ -57,6 +57,7 @@ header {
 }
 
 .logo {
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   letter-spacing: 10px;
   margin: 33px 0 0 40px;
@@ -91,6 +92,7 @@ padding-bottom: 4px;
 }
 
 .header-contents h1 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 64px;
   margin-bottom: 26px;
 }
@@ -98,7 +100,6 @@ padding-bottom: 4px;
 .header-contents p {
   margin-top: 15px;
   color: #ffffff;
-  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
   letter-spacing: 12px;
 }
 
@@ -129,13 +130,10 @@ padding-bottom: 4px;
 }
 
 .about-contents h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 48px;
   border-bottom: 5px solid #0a0a0a;
   padding-bottom: 10px;
-}
-
-.about-contents h3,p {
-  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
 }
 
 .about-contents h3 {

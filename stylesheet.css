@@ -28,7 +28,9 @@ time, mark, audio, video {
   }
 
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+</style>
 
 body {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
@@ -39,107 +41,45 @@ li {
   list-style: none;
 }
 
-.header-container {
+.total-contents {
   background-image: url("img/top.jpg");
   background-size: cover;
   height: 806px;
 }
 
 header {
-  width: 100%;
-  position: relative;
+ width: 100%;
+ position: relative;
 }
 
 .header-left {
-  color :#ffffff;
-  float: left;
-  margin-right: 300px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 36px;
+  left: 40px;
 }
 
-.logo {
-  font-family: 'Montserrat', sans-serif;
+.header-left div {
+  font-family: 'Montserrat',sans-serif;
   font-size: 20px;
   letter-spacing: 10px;
-  margin: 33px 0 0 40px;
 }
 
 .header-left p {
-  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
-  margin: 6px 0 0 40px;
-  font-size : 12px;
+  margin-bottom: 6px;
+  font-size: 12px;
   letter-spacing: 6px;
 }
 
 .header-right {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 18px;
+  position: absolute;
+  top: 24px;
+  left: 745px;
 }
 
 .header-right li {
-  margin: 29px 35px 0 35px;
+  display: inline-block;
+  font-size: 18px;
+  margin: 0 35px 0 35px;
 }
 
-.header-right li:first-child {
-border-bottom :8px solid #000000;
-padding-bottom: 4px;
-}
-
-.header-contents {
-  position: absolute;
-  top: 360px;
-  left: 138px;
-}
-
-.header-contents h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 64px;
-  margin-bottom: 26px;
-}
-
-.header-contents p {
-  margin-top: 15px;
-  color: #ffffff;
-  letter-spacing: 12px;
-}
-
-.arrow {
-  width: 37px;
-  height: 37px;
-  border: 5px solid;
-  border-color: transparent #FFFFFF #FFFFFF transparent;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 727px;
-  left: 614px;
-}
-
-.about {
-  display: flex;
-  justify-content: space-around;
-  width: 1004px;
-}
-
-.about-contents {
-  border: 1px solid #707070;
-  background-color: #f0f0f0;
-}
-
-.about-photo img {
-  height: auto;
-}
-
-.about-contents h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 48px;
-  border-bottom: 5px solid #0a0a0a;
-  padding-bottom: 10px;
-}
-
-.about-contents h3 {
-  font-size: 24px;
-}
-
-.about-contents p {
-  font-size: 16px;
-}

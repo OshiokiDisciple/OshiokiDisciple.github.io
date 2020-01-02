@@ -1,4 +1,4 @@
-/*
+*
 html5doctor.com Reset stylesheet
 v1.6.1
 Last Updated: 2010-09-17
@@ -82,4 +82,37 @@ header {
   font-size: 18px;
   margin: 0 35px 0 35px;
 }
+
+.header-right li : first-child {
+  border-bottom: 8px solid #000000;
+}
+
+.title {
+  position: absolute;
+  top: 360px;
+  left: 138px;
+}
+
+.title h1 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 64px;
+  margin-bottom: 26px;
+}
+
+.title p {
+  color: #FFFFFF;
+  font-size: 24px;
+  letter-spacing: 12px;
+}
+
+.arrow {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 721px;
+  left: 614px;
+  border: 5px solid;
+  border-color: transparent #FFFFFF #FFFFFF transparent;
+  }
 

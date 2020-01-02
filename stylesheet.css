@@ -1,4 +1,4 @@
-*
+/*
 html5doctor.com Reset stylesheet
 v1.6.1
 Last Updated: 2010-09-17
@@ -83,8 +83,9 @@ header {
   margin: 0 35px 0 35px;
 }
 
-.header-right li : first-child {
-  border-bottom: 8px solid #000000;
+.header-right li:first-child {
+border-bottom :8px solid #000000;
+padding-bottom: 4px;
 }
 
 .title {
@@ -116,3 +117,7 @@ header {
   border-color: transparent #FFFFFF #FFFFFF transparent;
   }
 
+.about {
+  position: relative;
+
+}

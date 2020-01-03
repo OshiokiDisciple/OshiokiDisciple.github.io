@@ -121,7 +121,6 @@ padding-bottom: 4px;
   position: absolute;
   top: 986px;
   left:139px;
-  width: 1004px;
 }
 
 .about-box {
@@ -155,14 +154,29 @@ padding-bottom: 4px;
 
 .about-photo {
   position: absolute;
-  top: 1045px;
+  top: 59px;
   left: 648px;
+  height: 329px;
 }
 
 .item {
   position: absolute;
   top: 1549px;
   left: 138px;
+}
+
+.item-logo h2 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 48px;
+  letter-spacing: 10px;
+  border-bottom:5px solid #0A0A0A;
+  width: 69px;
+  padding-bottom: 8px;
+}
+
+.item-logo p {
+  font-size: 16px;
+  padding-top: 12px;
 }
 
 .price {

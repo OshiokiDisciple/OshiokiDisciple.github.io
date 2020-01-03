@@ -121,6 +121,7 @@ padding-bottom: 4px;
   position: absolute;
   top: 986px;
   left:139px;
+  display: flex;
 }
 
 .about-box {
@@ -132,14 +133,14 @@ padding-bottom: 4px;
 .about-box h2 {
   font-family: 'Montserrat',sans-serif;
   font-size: 48px;
-  border-bottom:5px solid #0A0A0A;
   width: 69px;
-  margin: 77px 0 10px 56px;
+  border-bottom:5px solid #0A0A0A;
+  margin: 77px 0 0 57px;
 }
 
 .about-box p {
   font-size: 16px;
-  margin: 12px 0 25px 56px;
+  margin: 12px 56px 25px 56px;
 }
 
 .about-cosme dt {
@@ -149,14 +150,12 @@ padding-bottom: 4px;
 
 .about-cosme dd {
   font-size: 16px;
-  margin: 0 0 44px 56px;
+  padding: 0 56px 44px 56px;
 }
 
 .about-photo {
-  position: absolute;
-  top: 59px;
-  left: 648px;
-  height: 329px;
+  width: 494px;
+  padding: 59px 0 0 92px;
 }
 
 .item {
@@ -176,13 +175,70 @@ padding-bottom: 4px;
 
 .item-logo p {
   font-size: 16px;
-  padding-top: 12px;
+  padding: 12px 0 40px 0;
 }
 
-.price {
+.items {
+  display: flex;
+}
+
+.item-info {
+  padding-right: 16px;
+}
+
+.item-info p {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  padding: 39px 0 12px 0;
+}
+
+.item-info dt {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 24px;
+  letter-spacing: 5px;
+  padding-bottom: 32px;
+}
+
+.item-info dd {
+  font-size: 16px;
+}
+
+.price-table {
   position: absolute;
-  top: 2428px;
+  top: 2425px;
   left: 132px;
+  border: 5px solid #A38787;
+  width: 494px;
+  height: 549px;
+  opacity: 0.8;
+  background-color: #FFFFFF;
+  z-index: 30;
+}
+
+.price-table h2 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 48px;
+  letter-spacing: 10px;
+  text-align: center;
+  border-bottom:5px solid #0A0A0A;
+  padding: 61px 0 15px 0;
+}
+
+.price-table p {
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 0 79px 0;
+}
+
+tr {
+  text-align: center;
+}
+
+.cosmes-photo {
+  position: absolute;
+  top: 2521px;
+  left: 479px;
 }
 
 .blog {

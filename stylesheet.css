@@ -125,9 +125,6 @@ padding-bottom: 4px;
 }
 
 .about-box {
-  position: absolute;
-  top: 186px;
-  left: 138px;
   border: 1px solid #707070;
   width: 418px;
   height: 448px;
@@ -158,12 +155,42 @@ padding-bottom: 4px;
 
 .about-photo {
   position: absolute;
-  top: 245px;
+  top: 1045px;
   left: 648px;
 }
 
 .item {
   position: absolute;
-  top: 749px;
+  top: 1549px;
   left: 138px;
+}
+
+.price {
+  position: absolute;
+  top: 2428px;
+  left: 132px;
+}
+
+.blog {
+  position: absolute;
+  top: 3582px;
+  left: 138px;
+}
+
+.access {
+  position: absolute;
+  top: 4279px;
+  left: 138px;
+}
+
+.route {
+  position: absolute;
+  top: 5067px;
+  left: 276px;
+}
+
+footer {
+  position: absolute;
+  top: 5644px;
+  left: 390px;
 }

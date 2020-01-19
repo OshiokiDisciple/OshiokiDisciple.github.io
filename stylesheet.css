@@ -49,6 +49,7 @@ li {
 
 header {
  width: 100%;
+ position: relative;
 }
 
 .top-info {
@@ -57,7 +58,10 @@ header {
 
 .header-left {
   color: #FFFFFF;
-  padding : 36px 0 0 40px;
+  position: absolute;
+  top: 36px;
+  left: 40px;
+
 }
 
 .header-left div {
@@ -79,7 +83,6 @@ header {
 .header-right li {
   display: inline-block;
   font-size: 18px;
-  margin: 0 35px 0 35px;
 }
 
 .header-right li:first-child {

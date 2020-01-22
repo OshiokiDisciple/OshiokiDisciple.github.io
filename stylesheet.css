@@ -127,8 +127,6 @@ padding-bottom: 4px;
   font-family: 'Montserrat',sans-serif;
   font-size: 48px;
   border-bottom:5px solid #0A0A0A;
-  padding: 77px 0 10px 57px;
-  margin-bottom: 12px;
 
 }
 
@@ -148,6 +146,7 @@ padding-bottom: 4px;
 }
 
 .about-photo {
+  display: flex;
   align-items: center;
 }
 

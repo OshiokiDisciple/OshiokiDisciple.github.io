@@ -48,20 +48,14 @@ li {
 }
 
 header {
- width: 100%;
- position: relative;
-}
-
-.top-info {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .header-left {
   color: #FFFFFF;
-  position: absolute;
-  top: 36px;
-  left: 40px;
-
+  margin: 36px 0 0 40px;
 }
 
 .header-left div {
@@ -77,12 +71,13 @@ header {
 }
 
 .header-right {
-  padding: 26px 0 0 585px;
+  margin-top: 28px;
 }
 
 .header-right li {
   display: inline-block;
-  font-size: 18px;
+  margin: 0 35px;
+
 }
 
 .header-right li:first-child {
@@ -91,9 +86,7 @@ padding-bottom: 4px;
 }
 
 .title {
-  position: absolute;
-  top: 360px;
-  left: 138px;
+  margin: 366px 0 0 198px;
 }
 
 .title h1 {
@@ -111,53 +104,51 @@ padding-bottom: 4px;
 .arrow {
   width: 37px;
   height: 37px;
-  position: absolute;
   transform: rotate(45deg);
-  top: 721px;
-  left: 614px;
+  margin: 721px 0 0 614px;
   border: 5px solid;
   border-color: transparent #FFFFFF #FFFFFF transparent;
   }
 
 .about {
-  position: absolute;
-  top: 986px;
-  left:139px;
+  margin: 186px auto;
+  width: 1004px;
   display: flex;
+  justify-content: space-around;
 }
 
 .about-box {
   border: 1px solid #707070;
   width: 418px;
-  height: 448px;
+  margin: auto;
 }
 
 .about-box h2 {
   font-family: 'Montserrat',sans-serif;
   font-size: 48px;
-  width: 69px;
   border-bottom:5px solid #0A0A0A;
-  margin: 77px 0 0 57px;
+  padding: 77px 0 10px 57px;
+  margin-bottom: 12px;
+
 }
 
 .about-box p {
   font-size: 16px;
-  margin: 12px 56px 25px 56px;
+  padding: 0 0 25px 57px;
 }
 
 .about-cosme dt {
   font-size: 24px;
-  margin: 0 0 29px 56px;
+  padding: 0 0 29px 57px;
 }
 
 .about-cosme dd {
   font-size: 16px;
-  padding: 0 56px 44px 56px;
+  padding: 0 56px 44px 57px;
 }
 
 .about-photo {
-  width: 494px;
-  padding: 59px 0 0 92px;
+  align-items: center;
 }
 
 .item {

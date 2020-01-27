@@ -45,6 +45,7 @@ li {
   background-image: url("img/top.jpg");
   background-size: cover;
   height: 806px;
+  position: relative;
 }
 
 header {
@@ -79,13 +80,16 @@ header {
   margin: 0 35px;
 }
 
-.header-right li:first-child {
+.underline-1 {
   border-bottom :8px solid #000000;
   padding-bottom: 4px;
+  width: 57px;
 }
 
 .title {
-  margin: 366px 0 0 198px;
+  position: absolute;
+  top: 366px;
+  left: 198px;
 }
 
 .title h1 {
@@ -101,12 +105,14 @@ header {
 }
 
 .arrow {
+  border-top: 5px solid #FFFFFF;
+  border-right: 5px solid #FFFFFF;
   width: 37px;
   height: 37px;
-  transform: rotate(45deg);
-  margin: 721px 0 0 614px;
-  border: 5px solid;
-  border-color: transparent #FFFFFF #FFFFFF transparent;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 721px;
+  left: 614px;
   }
 
 .about {
@@ -121,16 +127,30 @@ header {
   width: 418px;
 }
 
-.about-box h2 {
+h2 {
   font-family: 'Montserrat',sans-serif;
   font-size: 48px;
+}
+
+.about-box h2 {
   margin: 77px 0 0 57px;
+}
+
+.underline-2,.underline-3,.underline-4,.underline-5,.underline-6 {
   border-bottom:5px solid #0A0A0A;
   width: 69px;
 }
 
-.about-box p {
+.underline-2 {
+  margin-left: 57px;
+  padding-top: 10px;
+}
+
+.under-heading {
   font-size: 16px;
+}
+
+.about-box p {
   margin: 12px 0 0 57px;
 }
 
@@ -154,29 +174,22 @@ header {
   width: 1004px;
 }
 
-.item-logo h2 {
-  font-family: 'Montserrat',sans-serif;
-  font-size: 48px;
+.heading {
   letter-spacing: 10px;
-  border-bottom:5px solid #0A0A0A;
-  width: 69px;
-  padding-bottom: 8px;
+}
+
+.underline-3 {
+  padding-top: 8px;
 }
 
 .item-logo p {
-  font-size: 16px;
   margin-top: 12px;
 }
 
 .items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 40px auto;
-}
-
-.item-info {
-  margin-right: 16px;
-  width: 324px;
 }
 
 .item-info p {
@@ -186,6 +199,11 @@ header {
   margin-top: 39px;
 }
 
+.item-info {
+  margin-right: 16px;
+  width: 324px;
+}
+
 .item-info dt {
   font-family: 'Montserrat',sans-serif;
   font-size: 24px;
@@ -193,35 +211,40 @@ header {
   margin-top: 12px;
 }
 
-.item-info dd {
+.description-1,.description-2,.description-3 {
   font-size: 16px;
   margin-top: 30px;
+}
+
+.description-3 {
+  text-align: center;
 }
 
 .price {
   width: 1004px;
   margin: 259px auto;
+  position: relative;
 }
 
 .price-table {
   width: 494px;
-  margin: 0 auto;
   border: 5px solid #A38787;
   background-color: #FFFFFF;
+  opacity: 0.8;
 }
 
 .price-table h2 {
-  font-family: 'Montserrat',sans-serif;
-  font-size: 48px;
-  letter-spacing: 10px;
+  margin-top :55px;
+  text-align: center;
+}
+
+.underline-4 {
   border-bottom:5px solid #0A0A0A;
   width: 69px;
-  margin: 55px 181px 0 181px;
-  padding-bottom: 18px;
+  margin: 18px auto 15px auto;
 }
 
 .price-table p {
-  font-size: 16px;
   margin: 18px 218px 0 228px;
 }
 
@@ -238,13 +261,56 @@ header {
   font-size: 16px;
 }
 
-hr {
-  border: 0;
+ hr {
+  border :0;
   border-bottom: 1px dotted #707070;
 }
 
 .cosmes-photo {
   position: absolute;
-  top: 
-  left:
+  top: 93px;
+  left: 330px;
+  z-index: -1;
+}
+
+.blog {
+  width: 1004px;
+  margin: 605px auto;
+}
+
+.underline-5 {
+  margin-top: 12px;
+}
+
+.blog-header p {
+  margin-top: 21px;
+}
+
+.articles {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-photo {
+  margin-bottom: 29px;
+}
+
+time {
+  font-family: 'Montserrat',sans-serif;
+  letter-spacing: 2px;
+  margin-top: 29px;
+}
+
+.articles p {
+  margin-top: 7px;
+}
+
+.access {
+  width: 1004px;
+  margin: 228px auto;
+}
+
+footer {
+  margin: 179px auto;
 }

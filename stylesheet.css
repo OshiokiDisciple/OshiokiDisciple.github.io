@@ -32,9 +32,14 @@ time, mark, audio, video {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 </style>
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
   margin: 0;
+  height: 100%;
 }
 
 li {
@@ -46,6 +51,7 @@ li {
   background-size: cover;
   height: 806px;
   position: relative;
+  width: 100%;
 }
 
 header {
@@ -115,9 +121,12 @@ header {
   left: 614px;
   }
 
+  .about,.item,.price,.blog,.access {
+    width: 1004px;
+  }
+
 .about {
   margin: 186px auto;
-  width: 1004px;
   display: flex;
   justify-content: space-around;
 }
@@ -311,6 +320,78 @@ time {
   margin: 228px auto;
 }
 
+.underline-6 {
+  margin: 24px 0 21px 0;
+}
+
+.access-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 98px;
+}
+
+.about-shop dd {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 24px;
+}
+
+.about-shop dt {
+  font-size: 16px;
+}
+
+.address dt {
+  margin-top: 15px;
+}
+
+.tel dd {
+  margin-top: 33px;
+}
+
+.tel dt {
+  margin-top: 7px;
+}
+
+.on-time dd {
+  margin-top: 22px;
+}
+
+.on-time dt {
+  margin-top: 7px;
+}
+
+.off-time dd {
+  margin-top: 33px;
+}
+
+.off-time dt {
+  margin-top: 10px;
+}
+
+.route {
+  margin: 147px auto;
+}
+
+.route dt {
+  font-size: 24px;
+}
+
+.route li {
+  margin-top: 28px;
+}
+
 footer {
-  margin: 179px auto;
+  margin-top: 179px;
+  background-color: #262626;
+  height: 264px;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-logo div {
+  font-size: 80px;
+  letter-spacing: 40px;
+  font-family: 'Montserrat',sans-serif;
+  color: #FFFFFF;
+  padding-top: 77px;
+  text-align: center;
 }

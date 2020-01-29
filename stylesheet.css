@@ -84,13 +84,19 @@ header {
 .header-right li {
   display: inline-block;
   margin: 0 35px;
+  position: relative;
 }
 
-.underline-1 {
-  border-bottom :8px solid #000000;
-  padding-bottom: 4px;
-  width: 57px;
-}
+ .header-right li::after {
+  content:  '';
+  position: absolute;
+  bottom: -4px; /*下線の位置(margin-bottomの役割)*/
+  left: 0;
+  display: inline-block;
+  width: 57px; /*下線の横幅*/
+  height: 8px; /*下線の縦幅*/
+　background-color: #0A0A0A; /*下線の色*/
+} /*反映されてない*/
 
 .title {
   position: absolute;
@@ -118,7 +124,8 @@ header {
   transform: rotate(135deg);
   position: absolute;
   top: 721px;
-  left: 614px;
+  left: 50%; /*修正済（1/30）*/
+　transform:translateX(-50%); /*修正済（1/30）、右側から見て真ん中の位置に移動*/
   }
 
   .about,.item,.price,.blog,.access {
@@ -128,7 +135,7 @@ header {
 .about {
   margin: 186px auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /*修正済（1/30）*/
 }
 
 .about-box {
@@ -139,21 +146,34 @@ header {
 h2 {
   font-family: 'Montserrat',sans-serif;
   font-size: 48px;
+  display: inline-block;
 }
 
 .about-box h2 {
   margin: 77px 0 0 57px;
+  position: relative;
+}
+
+.about-box h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /*下線の位置(margin-bottomの役割)*/
+  display: inline-block;
+  width: 69px; /*下線の横幅*/
+  height: 5px; /*下線の縦幅*/
+  background-color: #0A0A0A; /*下線の色*/
+  left: 0; /*下線の起点*/
 }
 
 .underline-2,.underline-3,.underline-4,.underline-5,.underline-6 {
   border-bottom:5px solid #0A0A0A;
   width: 69px;
-}
+} /*消しとく(1/30)*/
 
 .underline-2 {
   margin-left: 57px;
   padding-top: 10px;
-}
+} /*消しとく(1/30)*/
 
 .under-heading {
   font-size: 16px;
@@ -189,7 +209,7 @@ h2 {
 
 .underline-3 {
   padding-top: 8px;
-}
+} /*消しとく(1/30)*/
 
 .item-logo p {
   margin-top: 12px;
@@ -251,7 +271,7 @@ h2 {
   border-bottom:5px solid #0A0A0A;
   width: 69px;
   margin: 18px auto 15px auto;
-}
+} /*消しとく(1/30)*/
 
 .price-table p {
   margin: 18px 218px 0 228px;
@@ -289,7 +309,7 @@ h2 {
 
 .underline-5 {
   margin-top: 12px;
-}
+} /*消しとく(1/30)*/
 
 .blog-header p {
   margin-top: 21px;
@@ -322,7 +342,7 @@ time {
 
 .underline-6 {
   margin: 24px 0 21px 0;
-}
+} /*消しとく(1/30)*/
 
 .access-contents {
   display: flex;

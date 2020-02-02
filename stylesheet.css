@@ -79,15 +79,15 @@ header {
 
 .header-right {
   margin-top: 28px;
+  position: relative;
 }
 
 .header-right li {
   display: inline-block;
   margin: 0 35px;
-  position: relative;
 }
 
- .header-right li::after {
+ .header-right::after {
   content:  '';
   position: absolute;
   bottom: -4px; /*下線の位置(margin-bottomの役割)*/
@@ -124,7 +124,7 @@ header {
   transform: rotate(135deg);
   position: absolute;
   top: 721px;
-  left: 50%;
+  left: 50%;/*左から見て真ん中の位置に配置*/
 　transform:translateX(-50%); /*修正済（1/30）、右側から見て真ん中の位置に移動*/
   }
 

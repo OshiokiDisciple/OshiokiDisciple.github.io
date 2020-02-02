@@ -124,7 +124,7 @@ header {
   transform: rotate(135deg);
   position: absolute;
   top: 721px;
-  left: 50%; /*修正済（1/30）*/
+  left: 50%;
 　transform:translateX(-50%); /*修正済（1/30）、右側から見て真ん中の位置に移動*/
   }
 
@@ -135,7 +135,7 @@ header {
 .about {
   margin: 186px auto;
   display: flex;
-  justify-content: space-between; /*修正済（1/30）*/
+  justify-content: space-between;
 }
 
 .about-box {
@@ -157,23 +157,13 @@ h2 {
 .about-box h2::after {
   content: '';
   position: absolute;
-  bottom: -10px; /*下線の位置(margin-bottomの役割)*/
+  bottom: -10px; /*下線の位置(margin-topの役割)*/
   display: inline-block;
   width: 69px; /*下線の横幅*/
   height: 5px; /*下線の縦幅*/
   background-color: #0A0A0A; /*下線の色*/
   left: 0; /*下線の起点*/
 }
-
-.underline-2,.underline-3,.underline-4,.underline-5,.underline-6 {
-  border-bottom:5px solid #0A0A0A;
-  width: 69px;
-} /*消しとく(1/30)*/
-
-.underline-2 {
-  margin-left: 57px;
-  padding-top: 10px;
-} /*消しとく(1/30)*/
 
 .under-heading {
   font-size: 16px;
@@ -203,13 +193,20 @@ h2 {
   width: 1004px;
 }
 
-.heading {
-  letter-spacing: 10px;
+.item h2 {
+  position: relative;
 }
 
-.underline-3 {
-  padding-top: 8px;
-} /*消しとく(1/30)*/
+.item h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; /*下線の位置(margin-topの役割)*/
+  display: inline-block;
+  width: 69px; /*下線の横幅*/
+  height: 5px; /*下線の縦幅*/
+  background-color: #0A0A0A; /*下線の色*/
+  left: 0; /*下線の起点*/
+}
 
 .item-logo p {
   margin-top: 12px;
@@ -256,38 +253,26 @@ h2 {
 }
 
 .price-table {
-  width: 494px;
   border: 5px solid #A38787;
-  background-color: #FFFFFF;
-  opacity: 0.8;
+  width: 494px;
 }
 
 .price-table h2 {
   margin-top :55px;
   text-align: center;
+  position: relative;
 }
 
-.underline-4 {
-  border-bottom:5px solid #0A0A0A;
-  width: 69px;
-  margin: 18px auto 15px auto;
-} /*消しとく(1/30)*/
-
-.price-table p {
-  margin: 18px 218px 0 228px;
-}
-
-.menu {
-  margin: 76px 85px 67px 85px;
-}
-
-.menu-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.menuleft,.menuright {
-  font-size: 16px;
+.price-table h2::after {
+  content: '';
+  position: absolute;
+  bottom: -18px; /*下線の位置(margin-topの役割)*/
+  display: inline-block;
+  width: 69px; /*下線の横幅*/
+  height: 5px; /*下線の縦幅*/
+  background-color: #0A0A0A; /*下線の色*/
+  left: 50%; /*下線の起点*/
+  transform: translateX(-50%);
 }
 
  hr {
@@ -306,10 +291,6 @@ h2 {
   width: 1004px;
   margin: 605px auto;
 }
-
-.underline-5 {
-  margin-top: 12px;
-} /*消しとく(1/30)*/
 
 .blog-header p {
   margin-top: 21px;
@@ -340,9 +321,6 @@ time {
   margin: 228px auto;
 }
 
-.underline-6 {
-  margin: 24px 0 21px 0;
-} /*消しとく(1/30)*/
 
 .access-contents {
   display: flex;

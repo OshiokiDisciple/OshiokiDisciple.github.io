@@ -82,6 +82,14 @@ nav {
   position: relative;
 }
 
+/*806px以下の場合のレイアウト調整用*/
+@media screen and (max-width: 806px;) {
+  /*nav*/
+  nav {
+    position: relative;
+  }
+}
+
 .header-right li {
   display: inline-block;
   margin: 0 35px;
@@ -480,4 +488,4 @@ footer {
   color: #FFFFFF;
   padding-top: 77px;
   text-align: center;
-}/*
+}

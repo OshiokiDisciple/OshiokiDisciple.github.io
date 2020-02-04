@@ -210,6 +210,8 @@ h2 {
 .about-photo {
   display: flex;
   align-items: center;
+  max-width: 100%; /*imgのフルード化*/
+  height: auto; /*imgのフルード化*/
 }
 
 .item {
@@ -258,6 +260,11 @@ h2 {
   font-size: 24px;
   letter-spacing: 5px;
   margin-top: 12px;
+}
+
+.item-photo img {
+  max-width: 100%; /*imgのフルード化*/
+  height: auto; /*imgのフルード化*/
 }
 
 .description-1,.description-2,.description-3 {
@@ -329,6 +336,8 @@ tr:not(:last-child) {
   top: 93px;
   left: 330px;
   z-index: -1;
+  max-width: 100%; /*imgのフルード化*/
+  height: auto; /*imgのフルード化*/
 }
 
 .blog {
@@ -363,6 +372,8 @@ tr:not(:last-child) {
 
 .blog-photo {
   margin-bottom: 29px;
+  max-width: 100%; /*imgのフルード化*/
+  height: auto; /*imgのフルード化*/
 }
 
 time {
@@ -469,4 +480,4 @@ footer {
   color: #FFFFFF;
   padding-top: 77px;
   text-align: center;
-}
+}/*

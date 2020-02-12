@@ -148,15 +148,15 @@ a:hover::after {
 }
 
 .arrow {
-  border-top: 5px solid #FFFFFF;
-  border-right: 5px solid #FFFFFF;
+  border: 5px solid;
+  border-color: transparent transparent #FFFFFF #FFFFFF;
   width: 37px;
   height: 37px;
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
   position: absolute;
   top: 721px;
   left: 50%;/*左から見て真ん中の位置に配置*/
-　transform:translateX(-50%); /*修正済（1/30）、右側から見て真ん中の位置に移動*/
+  transform: translateX(-50%); /*修正済（1/30）、右側から見て真ん中の位置に移動*/
   }
 
   .about,.item,.price,.blog,.access {

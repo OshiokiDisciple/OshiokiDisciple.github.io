@@ -63,7 +63,7 @@ header {
 /*メインビジュアル左半分*/
 .header-left {
   color: #FFFFFF;
-  margin: 36px 0 0 40px;
+  margin: 5vh 0 0 7vw;
 }
 
 /*400px以下の場合のレイアウト調整用*/
@@ -140,17 +140,8 @@ a:hover::after {
 /*Awesome Cosmeticとサブタイトル*/
 .title {
   position: absolute;
-  top: 366px;
-  left: 198px;
-}
-
-/*400px以下の場合のレイアウト調整用*/
-@media screen and (max-width: 400px;) {
-  .title {
-    position: absolute;
-    top :　261px;
-    left: 41px;
-  }
+  top: 40vh;
+  left: 11vw;
 }
 
 .title h1 {
@@ -170,14 +161,12 @@ a:hover::after {
   border-color: transparent transparent #FFFFFF #FFFFFF;
   width: 37px;
   height: 37px;
-  -ms-transform: rotate(45deg);
-   /*-ms-付けたら解決すると思ったが未解決のまま*/
   position: absolute;
   top: 721px;
   left: 50%;
   /*左から見て真ん中の位置に配置*/
-  -ms-transform: translateX(-50%);
-  /*右側から見て真ん中の位置に移動*/
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+  /*右側から見て真ん中の位置に移動, 45度逆回転*/
   }
 
   .about,.item,.price,.blog,.access {

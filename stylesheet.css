@@ -272,6 +272,7 @@ h2 {
   }
 }
 
+/*こだわり*/
 .about-box p {
   margin: 27px 0 0 57px;
 }
@@ -327,6 +328,12 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin: 40px auto;
+}
+
+@media screen and (max-width: 400px;) {
+  .items {
+    display: block;
+  }
 }
 
 .item-info p {

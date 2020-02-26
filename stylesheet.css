@@ -37,12 +37,6 @@ html {
   font-size: 62.5%;/*フォントサイズの初期値を16pxから10pxに変更*/
 }
 
-@media screen and (max-width: 400px;) {
-  html {
-    font-size: 39.1%;/*400px以下の時、フォントサイズの初期値を16pxから6.25にpxすることを意図*/
-  }
-}
-
 body {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
   margin: 0;
@@ -62,7 +56,7 @@ li {
   width: 100%;
 }
 
-/*メインビジュアル*/
+/*メインビジュアル全体*/
 header {
   display: flex;
   justify-content: space-between;
@@ -75,12 +69,14 @@ header {
   margin: 5vh 0 0 7vw;
 }
 
+/*LogoLOGO*/
 .header-left div {
   font-family: 'Montserrat',sans-serif;
-　font-size: 2rem;
+　font-size: 20px;
   letter-spacing: 10px;
 }
 
+/*コスメです*/
 .header-left p {
   margin-bottom: 6px;
   font-size: 12px;
@@ -110,7 +106,7 @@ nav {
   text-decoration: none;
 }
 
-
+/*メニュークリックしたときに出るボーダーの疑似要素*/
 a::before,
 a::after {
   border-bottom: 8px solid #0A0A0A;
@@ -145,21 +141,34 @@ a:hover::after {
   left: 11vw;
 }
 
+/*Awesome Cosmetic*/
 .title h1 {
   font-family: 'Montserrat',sans-serif;
-  font-size: 6.4rem;/*64px*/
-  margin-bottom: 26px;
+  font-size: 64px;
+  margin-bottom: 40px;
 }
 
-/*400px*/
-@media screen and (max-width: 400px;)　{
-
+/*横幅400px以下の時のAwesome Cosmetic*/
+@media screen and (max-width: 400px;) {
+  .title h1 {
+    font-size: 11vw;
+    margin-bottom: 5vh;
+  }
 }
 
+/*サブタイトル*/
 .title p {
   color: #FFFFFF;
   font-size: 24px;
   letter-spacing: 12px;
+}
+
+/*横幅400px以下の時のサブタイトル*/
+@media screen and (max-width: 400px;) {
+  .title p {
+    font-size: 4vw;
+    letter-spacing: 2vw;
+  }
 }
 
 .arrow {
@@ -169,15 +178,17 @@ a:hover::after {
   height: 37px;
   position: absolute;
   top: 721px;
-  left: 50%;
-  /*左から見て真ん中の位置に配置*/
+  left: 50%;/*左から見て真ん中の位置に配置*/
   -webkit-transform: translateX(-50%) rotate(-45deg);
+  transform: translateX(-50%) rotate(-45deg);
   /*右側から見て真ん中の位置に移動, 45度逆回転*/
   }
 
   .about,.item,.price,.blog,.access {
     width: 1004px;
   }
+
+
 
 .about {
   margin: 186px auto 0 auto;

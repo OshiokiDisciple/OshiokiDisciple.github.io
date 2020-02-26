@@ -171,6 +171,7 @@ a:hover::after {
   }
 }
 
+/*メインビジュアルの矢印*/
 .arrow {
   border: 5px solid;
   border-color: transparent transparent #FFFFFF #FFFFFF;
@@ -184,21 +185,45 @@ a:hover::after {
   /*右側から見て真ん中の位置に移動, 45度逆回転*/
   }
 
-  .about,.item,.price,.blog,.access {
+/*各セクションの横幅*/
+.about,.item,.price,.blog,.access {
     width: 1004px;
   }
 
+/*横幅400px以下の時の各セクションの横幅*/
+@media screen and (max-width: 400px;) {
+  .about,.item,.price,.blog,.access {
+    width: 100%;
+  }
+}
 
-
+/*セクション "About"*/
 .about {
   margin: 186px auto 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
+/*横幅400px以下の時の"About"*/
+@media screen and (max-width: 400px;) {
+  .about {
+    display: none;
+    margin: 103px auto 0 auto;
+  }
+}
+
+/*"About"の四角い説明文*/
 .about-box {
   border: 1px solid #707070;
   width: 418px;
+}
+
+/*横幅400px以下の時は四角い説明文なくす*/
+@media screen and (max-width: 400px;) {
+  .about-box {
+    border: none;
+    width: 100%;
+  }
 }
 
 h2 {

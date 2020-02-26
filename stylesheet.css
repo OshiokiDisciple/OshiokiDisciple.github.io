@@ -116,8 +116,8 @@ a::after {
   position: absolute;
   height: 8px;
   right: 0;
-  transition: all. 0.5s ease;
   -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;/*ベンダーは2つ記載する*/
   width: 0;
 }
 
@@ -208,7 +208,7 @@ a:hover::after {
 /*横幅400px以下の時の"About"*/
 @media screen and (max-width: 400px;) {
   .about {
-    display: block;
+    display: block;/*説明文と写真を縦並びにしたかった*/
     margin: 103px auto 0 auto;
   }
 }
@@ -222,23 +222,33 @@ a:hover::after {
 /*横幅400px以下の時は四角い説明文なくす*/
 @media screen and (max-width: 400px;) {
   .about-box {
-    border: none;
+    border: 0;
     width: 100%;
   }
 }
 
+/*各セクションの見出し*/
 h2 {
   font-family: 'Montserrat',sans-serif;
-  font-size: 48px;/*48px*/
+  font-size: 48px;
   /*h2をブロック要素にしてたから
   text-align: center;で中央に寄らなかった*/
 }
 
+/*横幅400px以下の時の各セクションの見出し*/
+@media screen and (max-width: 400px;) {
+  h2 {
+    font-size: 10vw;
+  }
+}
+
+/*About*/
 .about-box h2 {
   margin: 77px 0 0 57px;
   position: relative;
 }
 
+/*Aboutの下線の疑似要素*/
 .about-box h2::after {
   content: '';
   position: absolute;
@@ -253,6 +263,13 @@ h2 {
 /*見出しの下の一文*/
 .about-box,.item-logo,.price-table,.blog-header,.access-header p {
   font-size: 16px;/*16px*/
+}
+
+/*横幅400px以下の時の各セクションの見出し*/
+@media screen and (max-width: 400px;) {
+  .about-box,.item-logo,.price-table,.blog-header,.access-header p {
+    font-size: 3vw;
+  }
 }
 
 .about-box p {

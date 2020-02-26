@@ -190,10 +190,11 @@ a:hover::after {
     width: 1004px;
   }
 
-/*横幅400px以下の時の各セクションの横幅*/
+/*横幅400px以下の時の各セクションの横幅と幅との間隔*/
 @media screen and (max-width: 400px;) {
   .about,.item,.price,.blog,.access {
     width: 100%;
+    margin: 0 5vw;
   }
 }
 
@@ -207,7 +208,7 @@ a:hover::after {
 /*横幅400px以下の時の"About"*/
 @media screen and (max-width: 400px;) {
   .about {
-    display: none;
+    display: block;
     margin: 103px auto 0 auto;
   }
 }
@@ -273,6 +274,12 @@ h2 {
   align-items: center;
   max-width: 100%; /*imgのフルード化*/
   height: auto; /*imgのフルード化*/
+}
+
+@media screen and (max-width: 400px;) {
+  .about-photo {
+    display: none;
+  }
 }
 
 .item {

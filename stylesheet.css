@@ -27,21 +27,16 @@ time, mark, audio, video {
   background: transparent;
   }
 
-
-<style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-</style>
 
 html {
   height: 100%;
-  font-size: 62.5%;/*フォントサイズの初期値を16pxから10pxに変更*/
 }
 
 body {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
   margin: 0;
   height: 100%;
-  font-size: 1.6em;/*ルートのフォントサイズを1.6em(=16px)に設定*/
 }
 
 li {
@@ -148,8 +143,8 @@ a:hover::after {
   margin-bottom: 40px;
 }
 
-/*横幅400px以下の時のAwesome Cosmetic*/
-@media screen and (max-width: 400px;) {
+/*横幅480px以下の時のAwesome Cosmetic*/
+@media screen and (max-width: 480px;) {
   .title h1 {
     font-size: 11vw;
     margin-bottom: 5vh;
@@ -163,8 +158,8 @@ a:hover::after {
   letter-spacing: 12px;
 }
 
-/*横幅400px以下の時のサブタイトル*/
-@media screen and (max-width: 400px;) {
+/*横幅480px以下の時のサブタイトル*/
+@media screen and (max-width: 480px;) {
   .title p {
     font-size: 4vw;
     letter-spacing: 2vw;
@@ -187,11 +182,11 @@ a:hover::after {
 
 /*各セクションの横幅*/
 .about,.item,.price,.blog,.access {
-    width: 1004px;
+    width: auto;
   }
 
-/*横幅400px以下の時の各セクションの横幅と幅との間隔*/
-@media screen and (max-width: 400px;) {
+/*横幅480px以下の時の各セクションの横幅と幅との間隔*/
+@media screen and (max-width: 480px;) {
   .about,.item,.price,.blog,.access {
     width: 100%;
     margin: 0 5vw;
@@ -205,11 +200,11 @@ a:hover::after {
   justify-content: space-between;
 }
 
-/*横幅400px以下の時の"About"*/
-@media screen and (max-width: 400px;) {
+/*横幅480px以下の時の"About"*/
+@media screen and (max-width: 480px;) {
   .about {
     display: block;/*説明文と写真を縦並びにしたかった*/
-    margin: 103px auto 0 auto;
+    margin-top: 103px;
   }
 }
 
@@ -235,8 +230,8 @@ h2 {
   text-align: center;で中央に寄らなかった*/
 }
 
-/*横幅400px以下の時の各セクションの見出し*/
-@media screen and (max-width: 400px;) {
+/*横幅480px以下の時の各セクションの見出し*/
+@media screen and (max-width: 480px;) {
   h2 {
     font-size: 10vw;
   }
@@ -457,6 +452,7 @@ tr:not(:last-child) {
 }
 
 .articles {
+  width: 324px;/*横幅指定*/
   margin-top: 60px;
   display: flex;
   justify-content: space-between;

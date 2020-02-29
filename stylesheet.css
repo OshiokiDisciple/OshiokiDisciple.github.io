@@ -182,13 +182,13 @@ a:hover::after {
 
 /*各セクションの横幅*/
 .about,.item,.price,.blog,.access {
-    width: auto;
+    width: 1004px;
   }
 
 /*横幅480px以下の時の各セクションの横幅と幅との間隔*/
 @media screen and (max-width: 480px;) {
   .about,.item,.price,.blog,.access {
-    width: 100%;
+    width: auto;
     margin: 0 5vw;
   }
 }

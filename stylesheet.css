@@ -289,12 +289,6 @@ h2 {
   height: auto; /*imgのフルード化*/
 }
 
-@media screen and (max-width: 480px) {
-  .about-photo {
-    display: none;
-  }
-}
-
 .item {
   margin: 115px auto 0 auto;
   width: 1004px;

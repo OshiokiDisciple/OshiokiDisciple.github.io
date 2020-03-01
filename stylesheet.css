@@ -189,7 +189,7 @@ a:hover::after {
 @media screen and (max-width: 480px) {
   .about,.item,.price,.blog,.access {
     width: auto;
-    margin: 0 5vw;
+    padding: 0 5vw;/*内側に間隔をあけるため*/
   }
 }
 
@@ -262,7 +262,7 @@ h2 {
 }
 
 /*横幅480px以下の時の各セクションの見出し*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .about-box,.item-logo,.price-table,.blog-header,.access-header p {
     font-size: 3vw;
   }
@@ -286,8 +286,15 @@ h2 {
 .about-photo {
   display: flex;
   align-items: center;
-  max-width: 100%; /*imgのフルード化*/
+  width: 494px;
   height: auto; /*imgのフルード化*/
+}
+
+/*横幅480px以下の時の各セクションの見出し*/
+@media screen and (max-width: 480px) {
+  .about-photo {
+    width: auto;
+  }
 }
 
 .item {

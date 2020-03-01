@@ -293,7 +293,7 @@ h2 {
 /*横幅480px以下の時の各セクションの見出し*/
 @media screen and (max-width: 480px) {
   .about-photo {
-    width: auto;
+    width: 100%;
   }
 }
 

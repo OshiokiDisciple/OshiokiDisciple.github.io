@@ -261,7 +261,7 @@ h2 {
   font-size: 16px;/*16px*/
 }
 
-/*横幅480px以下の時の各セクションの見出し*/
+/*横幅480px以下の時の各セクションの見出しの下のフォントサイズ*/
 @media screen and (max-width: 480px) {
   .about-box,.item-logo,.price-table,.blog-header,.access-header p {
     font-size: 3vw;
@@ -273,11 +273,27 @@ h2 {
   margin: 27px 0 0 57px;
 }
 
+/*横幅480px以下の時の”こだわり”のmargin-top*/
+@media screen and (max-width: 480px) {
+  .about-box p {
+    margin-top: 16px;
+  }
+}
+
+/*コスメについて*/
 .about-cosme dt {
   font-size: 24px;
   margin: 25px 0 0 57px;
 }
 
+/*横幅480px以下の時の”コスメについて”のフォントサイズ*/
+@media screen and (max-width: 480px) {
+  .about-cosme dt {
+    font-size: 5vw;
+  }
+}
+
+/*私たちのこだわり*/
 .about-cosme dd {
   font-size: 16px;
   margin: 41px 53px 32px 60px;
@@ -290,10 +306,10 @@ h2 {
   height: auto; /*imgのフルード化*/
 }
 
-/*横幅480px以下の時の各セクションの見出し*/
+/*横幅480px以下の時の写真の横幅*/
 @media screen and (max-width: 480px) {
   .about-photo {
-    width: 100%;
+    width: 100％;
   }
 }
 

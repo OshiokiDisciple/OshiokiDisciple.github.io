@@ -100,6 +100,27 @@ header {
   }
 }
 
+/*横幅801px以下の時のみハンバーガーメニュー,三本線の1本目)*/
+@media screen and (max-width: 801px) {
+  .ham-line1 span {
+    top: 4vh;
+  }
+}
+
+/*横幅801px以下の時のみハンバーガーメニュー,三本線の2本目)*/
+@media screen and (max-width: 801px) {
+  .ham-line2 span {
+    top: 6vh;
+  }
+}
+
+/*横幅801px以下の時のみハンバーガーメニュー,三本線の3本目)*/
+@media screen and (max-width: 801px) {
+  .ham-line3 span {
+    top: 8vh;
+  }
+}
+
 /*メインビジュアルのメニュー*/
 nav {
   margin-top: 28px;

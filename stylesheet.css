@@ -87,7 +87,9 @@ header {
   width: 21vw;
   height: 12vh;
   background-color: #FFFFFF;
+ }
 }
+
 
 /*横幅801px以下の時のみハンバーガーメニュー(三本線のコンテナ)*/
 @media screen and (max-width: 801px) {

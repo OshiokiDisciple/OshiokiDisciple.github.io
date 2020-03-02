@@ -79,9 +79,40 @@ header {
   letter-spacing: 6px;
 }
 
+/*横幅801px以下の時のみハンバーガーメニュー(コンテナ)*/
+@media screen and (max-width: 801px) {
+.btn-gnavi p {
+  position: absolute;/*メインビジュアルに対して絶対位置指定*/
+  left: 78vw;
+  width: 21vw;
+  height: 12vh;
+  background-color: #FFFFFF;
+}
+
+/*横幅801px以下の時のみハンバーガーメニュー(三本線のコンテナ)*/
+@media screen and (max-width: 801px) {
+  .btn-gnavi div {
+    position: relative;
+    margin: 0 auto;
+    width: 9vw;
+    height: 0.4vh;
+    background-color: #101010;
+  }
+}
+
 /*メインビジュアルのメニュー*/
 nav {
   margin-top: 28px;
+}
+
+/*横幅801px以下の時のメニュー*/
+@media screen and (max-width: 801px) {
+  nav {
+    /*横幅分右に移動することで、普段は消えているように見せる*/
+    position: fixed;
+    right: -100vw;
+    width: 100vw;
+  }
 }
 
 .header-right li {
@@ -89,7 +120,7 @@ nav {
   margin: 0 35px;
 }
 
-/*横幅480px以下の時のAwesome Cosmetic*/
+/*横幅801px以下の時のAwesome Cosmetic*/
 @media screen and (max-width: 801px) {
   .header-right li {
     flex-direction: column;

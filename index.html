@@ -19,9 +19,11 @@
      </div>
   <!--メニュー(ハンバーガーボタン)-->
      <p class="btn-gnavi">
-       <span></span>
-       <span></span>
-       <span></span>
+      <div>
+        <span class="ham-line1"></span>
+        <span class="ham-line2"></span>
+        <span class="ham-line3"></span>
+      </div>
      </p>
      <nav class="header-right">
       <ul>
@@ -200,7 +202,9 @@
      <div>LOGOLOGo</div>
    </footer>
   </article>
+  <!--js読み込ませた(</body>の前に書いた方がメリットあり)-->
   <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-  <!-- jQuery読み込ませた(必ず</body>の前に書く) -->
+  <!--jQueryの後にjsファイル読ませる-->
+  <script type="text/javascript" src="/js/index.js"></script>
  </body>
 </html>

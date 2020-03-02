@@ -43,6 +43,7 @@ li {
   list-style: none;
 }
 
+/*メインビジュアル全体*/
 .total-contents {
   background-image: url("img/top.jpg");
   background-size: cover;
@@ -51,7 +52,7 @@ li {
   width: 100%;
 }
 
-/*メインビジュアル全体*/
+/*LogoLOGOやメニュー*/
 header {
   display: flex;
   justify-content: space-between;
@@ -83,17 +84,17 @@ nav {
   margin-top: 28px;
 }
 
-/*806px以下の場合のレイアウト調整用*/
-@media screen and (max-width: 806px) {
-  /*nav*/
-  nav {
-    position: relative;
-  }
-}
-
 .header-right li {
   display: inline-block;
   margin: 0 35px;
+}
+
+/*横幅480px以下の時のAwesome Cosmetic*/
+@media screen and (max-width: 801px) {
+  .header-right li {
+    flex-direction: column;
+    margin: 0 35px;
+  }
 }
 
 .header-right a {
@@ -203,7 +204,7 @@ a:hover::after {
 /*横幅480px以下の時の"About"*/
 @media screen and (max-width: 480px) {
   .about {
-    display: block;/*説明文と写真を縦並びにしたかった*/
+    flex-direction: column;/*説明文と写真を縦並びにしたかった*/
     margin-top: 103px;
   }
 }
@@ -299,11 +300,25 @@ h2 {
   margin: 41px 53px 32px 60px;
 }
 
-.about-photo {
+/*横幅480px以下の時の”私たちのこだわり”のフォントサイズ*/
+@media screen and (max-width: 480px) {
+  .about-cosme dd {
+    font-size: 3vw;
+    margin-top: 20px;
+  }
+}
+
+.about-photo figure {
+  width: auto;
+  height: auto;
+}
+
+/*Aboutの女性の写真*/
+.about-photo img {
   display: flex;
   align-items: center;
-  width: 494px;
-  height: auto; /*imgのフルード化*/
+  width: 100%;
+  height: 100%; /*imgのフルード化*/
 }
 
 /*横幅480px以下の時の写真の横幅*/
@@ -313,15 +328,25 @@ h2 {
   }
 }
 
+/*セクション"item"*/
 .item {
   margin: 115px auto 0 auto;
   width: 1004px;
 }
 
+/*横幅480px以下の時のセクション"item"のmargin-top*/
+@media screen and (max-width: 480px) {
+  .item {
+    margin-top: 101px;
+  }
+}
+
+/*Item*/
 .item h2 {
   position: relative;
 }
 
+/*itemの下線の疑似要素*/
 .item h2::after {
   content: '';
   position: absolute;
@@ -333,19 +358,30 @@ h2 {
   left: 0; /*下線の起点*/
 }
 
+/*アイテム*/
 .item-logo p {
   margin-top: 25px;
 }
 
+/*横幅480px以下の時のアイテムのmargin-top*/
+@media screen and (max-width: 480px) {
+  .item-logo p {
+    margin-top: 12px;
+  }
+}
+
+/*Itemのコンテンツ*/
 .items {
   display: flex;
   justify-content: space-between;
   margin: 40px auto;
 }
 
+/*横幅480px以下の時のItemのコンテンツ*/
 @media screen and (max-width: 480px) {
   .items {
-    display: block;
+    flex-direction: column;
+    margin-top: 20px;
   }
 }
 

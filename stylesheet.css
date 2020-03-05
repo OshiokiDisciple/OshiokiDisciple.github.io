@@ -318,7 +318,7 @@ h2 {
 
 /*Aboutの女性の写真*/
 .about-photo img {
-  width: 100%;
+  max-width: 100%;/*画像のフルードイメージ化*/
 }
 
 /*セクション"item"*/
@@ -391,11 +391,12 @@ h2 {
 
 /*横幅480px以下の時のItemのコンテンツ*/
 @media screen and (max-width: 480px) {
-  .item-info p,dd {
+  .item-info p, .description-1,.description-2,.description-3 {
     font-size: 3vw;
   }
 }
 
+/*商品名*/
 .item-info dt {
   font-family: 'Montserrat',sans-serif;
   font-size: 24px;
@@ -403,37 +404,76 @@ h2 {
   margin-top: 12px;
 }
 
-.item-photo img {
-  max-width: 100%; /*imgのフルード化*/
-  height: auto; /*imgのフルード化*/
+/*Itemのコンテンツの写真のコンテナ*/
+.item-photo figure {
+  width: auto;
 }
 
+/*Itemのコンテンツの写真*/
+.item-photo img {
+  max-width: 100%; /*imgのフルード化*/
+}
+
+/*Itemコンテンツ 商品の説明文*/
 .description-1,.description-2,.description-3 {
   font-size: 16px;
   margin-top: 30px;
 }
 
+/*説明文を中央寄せにする*/
 .description-3 {
   text-align: center;
 }
 
+/*セクション"price"*/
 .price {
   width: 1004px;
   margin: 259px auto 0 auto;
   position: relative;
 }
 
+/*横幅480px以下の時のItemのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .price {
+    margin-top: 50px;
+    /*コスメの写真を背景に設定*/
+    background-image: url("img/various-cosme");
+    /*position初期化*/
+    position: static;
+  }
+}
+
+/*料金表*/
 .price-table {
   border: 5px solid #A38787;
   width: 494px;
-  background-color: rgba(255,255,255,0.8);
   /*背景色のみ透過*/
+  background-color: rgba(255,255,255,0.8);
 }
 
+/*横幅480px以下の時の料金表*/
+@media screen and (max-width: 480px) {
+  .price-table {
+    border: 5px solid #A38787;
+    width: auto;
+    background-color: rgba(255,255,255,0.9);
+  }
+}
+
+/*料金表の"Price"*/
 .price-table h2 {
   margin-top :55px;
   text-align: center;
   position: relative;
+}
+
+/*横幅480px以下の時の"Price"*/
+@media screen and (max-width: 480px) {
+  .price-table h2 {
+    margin-top: 64px;
+    text-align: center;
+    position: relative;
+  }
 }
 
 .price-table h2::after {
@@ -479,7 +519,13 @@ tr:not(:last-child) {
   left: 330px;
   z-index: -1;
   max-width: 100%; /*imgのフルード化*/
-  height: auto; /*imgのフルード化*/
+}
+
+/*横幅480px以下の時のItemのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .cosmes-photo {
+    display: none;
+  }
 }
 
 .blog {

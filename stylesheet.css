@@ -309,6 +309,7 @@ h2 {
   }
 }
 
+/*写真のコンテナ*/
 .about-photo figure {
   width: auto;
   /*写真が説明ボックスに対して、縦に中央にならない*/
@@ -374,6 +375,7 @@ h2 {
   .items {
     flex-direction: column;
     margin-top: 23px;
+    width: 100%;
   }
 }
 
@@ -437,7 +439,7 @@ h2 {
   .price {
     margin-top: 50px;
     /*コスメの写真を背景に設定*/
-    background-image: url("img/various-cosme");
+    background-image: url("img/various-cosme.jpg");
     /*position初期化*/
     position: static;
   }

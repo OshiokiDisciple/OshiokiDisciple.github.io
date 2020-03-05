@@ -79,64 +79,11 @@ header {
   letter-spacing: 6px;
 }
 
-/*横幅801px以下の時のみハンバーガーメニュー(コンテナ)*/
-@media screen and (max-width: 801px) {
-.btn-gnavi p {
-  position: absolute;/*メインビジュアルに対して絶対位置指定*/
-  left: 78vw;
-  width: 21vw;
-  height: 12vh;
-  background-color: #FFFFFF;
- }
-}
-
-
-/*横幅801px以下の時のみハンバーガーメニュー(三本線のコンテナ)*/
-@media screen and (max-width: 801px) {
-  .btn-gnavi div {
-    position: relative;
-    margin: 0 auto;
-    width: 9vw;
-    height: 0.4vh;
-    background-color: #101010;
-  }
-}
-
-/*横幅801px以下の時のみハンバーガーメニュー,三本線の1本目)*/
-@media screen and (max-width: 801px) {
-  .ham-line1 span {
-    top: 4vh;
-  }
-}
-
-/*横幅801px以下の時のみハンバーガーメニュー,三本線の2本目)*/
-@media screen and (max-width: 801px) {
-  .ham-line2 span {
-    top: 6vh;
-  }
-}
-
-/*横幅801px以下の時のみハンバーガーメニュー,三本線の3本目)*/
-@media screen and (max-width: 801px) {
-  .ham-line3 span {
-    top: 8vh;
-  }
-}
-
 /*メインビジュアルのメニュー*/
 nav {
   margin-top: 28px;
 }
 
-/*横幅801px以下の時のメニュー*/
-@media screen and (max-width: 801px) {
-  nav {
-    /*横幅分右に移動することで、普段は消えているように見せる*/
-    position: fixed;
-    right: -100vw;
-    width: 100vw;
-  }
-}
 
 .header-right li {
   display: inline-block;
@@ -364,28 +311,19 @@ h2 {
 
 .about-photo figure {
   width: auto;
-  height: auto;
+  /*写真が説明ボックスに対して、縦に中央にならない*/
+  display: flex;
+  align-items: center;
 }
 
 /*Aboutの女性の写真*/
 .about-photo img {
-  display: flex;
-  align-items: center;
   width: 100%;
-  height: 100%; /*imgのフルード化*/
-}
-
-/*横幅480px以下の時の写真の横幅*/
-@media screen and (max-width: 480px) {
-  .about-photo {
-    width: 100％;
-  }
 }
 
 /*セクション"item"*/
 .item {
   margin: 115px auto 0 auto;
-  width: 1004px;
 }
 
 /*横幅480px以下の時のセクション"item"のmargin-top*/
@@ -435,10 +373,15 @@ h2 {
 @media screen and (max-width: 480px) {
   .items {
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 23px;
   }
 }
 
+.item-info {
+  width: 33%;
+}
+
+/*ファンデーションなどの商品名*/
 .item-info p {
   font-family: 'Montserrat',sans-serif;
   font-size: 16px;
@@ -446,8 +389,11 @@ h2 {
   margin-top: 39px;
 }
 
-.item-info {
-  width: 324px;
+/*横幅480px以下の時のItemのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .item-info p,dd {
+    font-size: 3vw;
+  }
 }
 
 .item-info dt {

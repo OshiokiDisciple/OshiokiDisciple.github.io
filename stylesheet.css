@@ -454,7 +454,6 @@ h2 {
 /*横幅480px以下の時の料金表*/
 @media screen and (max-width: 480px) {
   .price-table {
-    border: 5px solid #A38787;
     width: auto;
     background-color: rgba(255,255,255,0.9);
   }
@@ -471,11 +470,10 @@ h2 {
 @media screen and (max-width: 480px) {
   .price-table h2 {
     margin-top: 64px;
-    text-align: center;
-    position: relative;
   }
 }
 
+/*"Price"の下の下線の疑似要素*/
 .price-table h2::after {
   content: '';
   position: absolute;
@@ -488,19 +486,53 @@ h2 {
   transform: translateX(-50%);
 }
 
+/*"Price"の下の料金表という文字*/
 .price-table p {
   margin-top: 38px; /*疑似要素ではなくh2との距離*/
   text-align: center;
 }
 
+/*横幅480px以下の時の"料金表"*/
+@media screen and (max-width: 480px) {
+  .price-table p {
+    margin-top: 50px;
+  }
+}
+
+/*料金表の商品や料金の部分全体*/
 .menu {
-  margin: 79px 85px 67.4px 85px;
+  /*上下は数字で指定、左右は真ん中寄席*/
+  margin: 79px auto 67.4px;
   width: 324px;
 }
 
+/*横幅480px以下の時のmenu*/
+@media screen and (max-width: 480px) {
+  .menu {
+    width: 59vw;
+  }
+}
+
+/*料金表 商品と金額が書いてる部分*/
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+}/*space-betweenにしたことで点線を引けた*/
+
+/*th=商品名, td=金額*/
 th,td {
+  font-size: 16px;
   line-height: 3;/*tr要素の行間を取ることができる
-  （pxではなく数値でとる）*/
+  （pxではなく数値でとる,この場合16*3でline-heightは48px）*/
+}
+
+/*横幅480px以下の時のmenu*/
+@media screen and (max-width: 480px) {
+  th,td {
+    font-size: 12px;
+    /*line-height=12*4=48px*/
+    line-height: 4;
+  }
 }
 
 /*料金表の下線*/
@@ -508,11 +540,7 @@ tr:not(:last-child) {
   border-bottom: 1px dashed #000000;
 }
 
-.menu-list {
-  display: flex;
-  justify-content: space-between;
-}/*space-betweenにしたことで点線を引けた*/
-
+/*料金表の写真の部分*/
 .cosmes-photo {
   position: absolute;
   top: 93px;
@@ -524,6 +552,7 @@ tr:not(:last-child) {
 /*横幅480px以下の時のItemのコンテンツ*/
 @media screen and (max-width: 480px) {
   .cosmes-photo {
+    /*写真を消す*/
     display: none;
   }
 }

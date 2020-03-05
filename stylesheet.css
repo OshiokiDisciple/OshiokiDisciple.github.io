@@ -378,7 +378,9 @@ h2 {
   }
 }
 
-.item-info {
+/*Itemの1つずつのコンテンツ*/
+.item-info li {
+  /*3つのコンテンツを均等に伸ばすイメージ*/
   width: 33%;
 }
 
@@ -463,6 +465,7 @@ h2 {
 /*横幅480px以下の時の料金表*/
 @media screen and (max-width: 480px) {
   .price-table {
+    /*上下は数字指定、左右はauto指定*/
     margin: 48px auto;
     width: auto;
     background-color: rgba(255,255,255,0.9);

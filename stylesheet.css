@@ -370,17 +370,24 @@ h2 {
   margin: 40px auto;
 }
 
-/*横幅480px以下の時のItemのコンテンツ*/
+/*横幅480px以下の時のItemのコンテンツ全体*/
 @media screen and (max-width: 480px) {
   .items {
     flex-direction: column;
     margin-top: 23px;
-    width: 100%;
   }
 }
 
 .item-info {
   width: 33%;
+}
+
+/*横幅480px以下の時のItemの1つずつのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .item-info li {
+  /*コンテンツを横いっぱいに広げる*/
+    width: 100%;
+  }
 }
 
 /*ファンデーションなどの商品名*/
@@ -456,6 +463,7 @@ h2 {
 /*横幅480px以下の時の料金表*/
 @media screen and (max-width: 480px) {
   .price-table {
+    margin: 48px auto;
     width: auto;
     background-color: rgba(255,255,255,0.9);
   }

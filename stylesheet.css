@@ -184,13 +184,12 @@ a:hover::after {
 
 /*各セクションの横幅*/
 .about,.item,.price,.blog,.access {
-    width: 1004px;
+    width: auto;
   }
 
 /*横幅480px以下の時の各セクションの横幅と幅との間隔*/
 @media screen and (max-width: 480px) {
   .about,.item,.price,.blog,.access {
-    width: auto;
     padding: 0 5vw;/*内側に間隔をあけるため*/
   }
 }
@@ -205,7 +204,7 @@ a:hover::after {
 /*横幅480px以下の時の"About"*/
 @media screen and (max-width: 480px) {
   .about {
-    flex-direction: column;/*説明文と写真を縦並びにしたかった*/
+    flex-direction: column;/*説明文と写真を縦並びにする*/
     margin-top: 103px;
   }
 }
@@ -314,6 +313,7 @@ h2 {
   width: auto;
   /*写真が説明ボックスに対して、縦に中央にならない*/
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
 }
 
@@ -380,7 +380,7 @@ h2 {
 /*Itemの1つずつのコンテンツ*/
 .item-info li {
   /*3つのコンテンツを均等に伸ばすイメージ*/
-  width: 33%;
+  width: auto;
 }
 
 /*横幅480px以下の時のItemの1つずつのコンテンツ*/

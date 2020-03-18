@@ -184,12 +184,13 @@ a:hover::after {
 
 /*各セクションの横幅*/
 .about,.item,.price,.blog,.access {
-    width: auto;
+    width: 1004px;
   }
 
 /*横幅480px以下の時の各セクションの横幅と幅との間隔*/
 @media screen and (max-width: 480px) {
   .about,.item,.price,.blog,.access {
+    width: auto;/*可変幅*/
     padding: 0 5vw;/*内側に間隔をあけるため*/
   }
 }
@@ -380,7 +381,7 @@ h2 {
 /*Itemの1つずつのコンテンツ*/
 .item-info li {
   /*3つのコンテンツを均等に伸ばすイメージ*/
-  width: auto;
+  width: 324px;
 }
 
 /*横幅480px以下の時のItemの1つずつのコンテンツ*/

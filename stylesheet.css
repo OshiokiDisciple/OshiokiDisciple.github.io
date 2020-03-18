@@ -439,7 +439,6 @@ h2 {
 
 /*セクション"price"*/
 .price {
-  width: 1004px;
   margin: 259px auto 0 auto;
   position: relative;
 }
@@ -452,6 +451,7 @@ h2 {
     background-image: url("img/various-cosme.jpg");
     /*position初期化*/
     position: static;
+    width: 129vw;
   }
 }
 
@@ -468,7 +468,7 @@ h2 {
   .price-table {
     /*上下は数字指定、左右はauto指定*/
     margin: 48px auto;
-    width: auto;
+    width: 90vw;
     background-color: rgba(255,255,255,0.9);
   }
 }
@@ -572,7 +572,6 @@ tr:not(:last-child) {
 }
 
 .blog {
-  width: 1004px;
   margin:605px auto 0 auto;
 }
 
@@ -619,7 +618,6 @@ time {
 }
 
 .access {
-  width: 1004px;
   margin: 228px auto 0 auto;
 }
 

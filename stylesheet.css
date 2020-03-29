@@ -584,10 +584,12 @@ tr:not(:last-child) {
   }
 }
 
+/*セクションBlogの見出し "blog"*/
 .blog-header h2 {
   position: relative;
 }
 
+/*"blog"の下の下線の疑似要素*/
 .blog-header h2::after {
   content: '';
   position: absolute;
@@ -599,14 +601,36 @@ tr:not(:last-child) {
   left: 0; /*下線の起点*/
 }
 
+/*ブログ*/
 .blog-header p {
   margin-top: 38px;
 }
 
+/*横幅480px以下の時のItemのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .blog-header p {
+    margin-top: 50px;
+  }
+}
+
+/*セクションBlog全体のコンテンツ*/
 .articles {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
+}
+
+/*横幅480px以下の時のセクションBlog全体のコンテンツ
+(修正予定)*/
+@media screen and (max-width: 480px) {
+  .articles {
+    /*グリッドレイアウトの表示形式を指定*/
+    display: grid;
+    /*4分割定義*/
+    grid-template-columns: repeat(4, 1fr);
+    /**/
+    grid-gap: 30px;
+  }
 }
 
 .blog-photo {

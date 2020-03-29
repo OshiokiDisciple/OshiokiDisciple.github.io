@@ -468,7 +468,7 @@ h2 {
 @media screen and (max-width: 480px) {
   .price-table {
     /*上下は数字指定、左右はauto指定*/
-    margin: 48px auto;
+    margin: 48px 0 49px 0;
     width: 90vw;
     background-color: rgba(255,255,255,0.9);
   }

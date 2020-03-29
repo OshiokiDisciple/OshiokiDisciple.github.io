@@ -200,6 +200,9 @@ a:hover::after {
   margin: 186px auto 0 auto;
   display: flex;
   justify-content: space-between;
+  /*親要素にalign-items: center;と書くことで、女性の写真を配置する*/
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 /*横幅480px以下の時の"About"*/
@@ -312,10 +315,6 @@ h2 {
 /*写真のコンテナ*/
 .about-photo figure {
   width: auto;
-  /*写真が説明ボックスに対して、縦に中央にならない*/
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
 /*Aboutの女性の写真*/
@@ -379,14 +378,16 @@ h2 {
 }
 
 /*Itemの1つずつのコンテンツ*/
-.item-info li {
-  /*3つのコンテンツを均等に伸ばすイメージ*/
-
+.item-info {
+  /*親要素class itemsにjustify-content: space-between;を
+  設定してるので1つひとつのコンテンツの横幅を設定することで
+  自動的に割り振られる*/
+  width: 324px;
 }
 
 /*横幅480px以下の時のItemの1つずつのコンテンツ*/
 @media screen and (max-width: 480px) {
-  .item-info li {
+  .item-info {
   /*コンテンツを横いっぱいに広げる*/
     width: 100%;
     margin: 23px auto 0;

@@ -635,22 +635,6 @@ tr:not(:last-child) {
   }
 }
 
-/*横幅480px以下の時の2つのコンテンツ*/
-@media screen and (max-width: 480px) {
-  .blog-article-1,.blog-article-2 {
-    width: 45%;
-    margin-top: 73px;
-  }
-}
-
-/*横幅480px以下の時の下1つのコンテンツ*/
-@media screen and (max-width: 480px) {
-  .blog-article-3 {
-    width: 45%;
-    margin-top: 30px;
-  }
-}
-
 /*コンテンツの写真*/
 .blog-photo {
   width: 324px;/*横幅指定*/
@@ -659,7 +643,14 @@ tr:not(:last-child) {
   height: auto; /*imgのフルード化*/
 }
 
+/*横幅480px以下の時の親要素articles、子要素blog-articles*/
+@media screen and (max-width: 480px) {
+  .blog-article-1,.blog-article-2.blog-article-3 {
+    width :45%;
+  }
+}
 
+/*コンテンツ下の日付*/
 time {
   font-family: 'Montserrat',sans-serif;
   letter-spacing: 2px;

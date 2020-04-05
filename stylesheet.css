@@ -619,27 +619,46 @@ tr:not(:last-child) {
   /*親要素にflexを設定する*/
   display: flex;
 }
+
 /*親要素articles、子要素blog-articles
 (blog-articlesは1つひとつのコンテンツ)*/
-.articles,.blog-article {
+.articles,.blog-article-1,.blog-article-2.blog-article-3 {
   /*コンテンツを横並びにする*/
   justify-content: space-between;
 }
 
-/*横幅480px以下の時のセクションBlog全体のコンテンツ
-(修正予定)*/
+/*横幅480px以下の時の親要素articles、子要素blog-articles*/
 @media screen and (max-width: 480px) {
-  .articles,.blog-article {
+  .articles,.blog-article-1,.blog-article-2,.blog-articles-3 {
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 }
 
+/*横幅480px以下の時の2つのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .blog-article-1,.blog-article-2 {
+    width: 45%;
+    margin-top: 73px;
+  }
+}
+
+/*横幅480px以下の時の下1つのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .blog-article-3 {
+    width: 45%;
+    margin-top: 30px;
+  }
+}
+
+/*コンテンツの写真*/
 .blog-photo {
   width: 324px;/*横幅指定*/
   margin-bottom: 29px;
   max-width: 100%; /*imgのフルード化*/
   height: auto; /*imgのフルード化*/
 }
+
 
 time {
   font-family: 'Montserrat',sans-serif;

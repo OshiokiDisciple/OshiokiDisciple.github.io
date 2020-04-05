@@ -70,6 +70,7 @@ header {
   font-family: 'Montserrat',sans-serif;
 　font-size: 20px;
   letter-spacing: 10px;
+  font-weight: bold;
 }
 
 /*コスメです*/
@@ -77,6 +78,7 @@ header {
   margin-bottom: 6px;
   font-size: 12px;
   letter-spacing: 6px;
+  font-weight: bold;
 }
 
 /*メインビジュアルのメニュー*/
@@ -143,6 +145,7 @@ a:hover::after {
   font-family: 'Montserrat',sans-serif;
   font-size: 64px;
   margin-bottom: 40px;
+  font-weight: bold;
 }
 
 /*横幅480px以下の時のAwesome Cosmetic*/
@@ -158,6 +161,7 @@ a:hover::after {
   color: #FFFFFF;
   font-size: 24px;
   letter-spacing: 12px;
+  font-weight: bold;
 }
 
 /*横幅480px以下の時のサブタイトル*/
@@ -234,6 +238,7 @@ h2 {
   font-size: 48px;
   /*h2をブロック要素にしてたから
   text-align: center;で中央に寄らなかった*/
+  font-weight: bold;
 }
 
 /*横幅480px以下の時の各セクションの見出し*/
@@ -263,7 +268,8 @@ h2 {
 
 /*見出しの下の一文*/
 .about-box,.item-logo,.price-table,.blog-header,.access-header p {
-  font-size: 16px;/*16px*/
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /*横幅480px以下の時の各セクションの見出しの下のフォントサイズ*/
@@ -302,6 +308,7 @@ h2 {
 .about-cosme dd {
   font-size: 16px;
   margin: 41px 53px 32px 60px;
+  font-weight: normal;
 }
 
 /*横幅480px以下の時の”私たちのこだわり”のフォントサイズ*/
@@ -347,7 +354,7 @@ h2 {
   display: inline-block;
   width: 69px; /*下線の横幅*/
   height: 5px; /*下線の縦幅*/
-  background-color: #0a0a0a; /*下線の色*/
+  background-color: #0A0A0A; /*下線の色*/
   left: 0; /*下線の起点*/
 }
 
@@ -359,7 +366,7 @@ h2 {
 /*横幅480px以下の時のアイテムのmargin-top*/
 @media screen and (max-width: 480px) {
   .item-logo p {
-    margin-top: 12px;
+    margin-top: 27px;
   }
 }
 
@@ -398,6 +405,7 @@ h2 {
 .item-info p {
   font-family: 'Montserrat',sans-serif;
   font-size: 16px;
+  font-weight: bold;
   letter-spacing: 3px;
   margin-top: 39px;
 }
@@ -643,12 +651,19 @@ tr:not(:last-child) {
   height: auto; /*imgのフルード化*/
 }
 
-/*横幅480px以下の時の親要素articles、子要素blog-articles*/
+/*横幅480px以下の時の上2つのコンテンツ*/
 @media screen and (max-width: 480px) {
-  .blog-article-1,.blog-article-2.blog-article-3 {
+  .blog-article-1,.blog-article-2 {
     width :45%;
+    margin-top: 73px;
   }
 }
+
+/*横幅480px以下の時の下1つのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .blog-article-3 {
+    margin-top: 30px;
+  }
 
 /*コンテンツ下の日付*/
 time {
@@ -657,18 +672,43 @@ time {
   margin-top: 29px;
 }
 
+/*横幅480px以下の時の日付*/
+@media screen and (max-width: 480px) {
+  time {
+    margin-top: 8px;
+  }
+}
+
+/*日付の下のブログタイトル*/
 .articles p {
   margin-top: 7px;
 }
 
+/*横幅480px以下の時の日付*/
+@media screen and (max-width: 480px) {
+  .articles p {
+    margin-top: 6px;
+  }
+}
+
+/*セクションAccess*/
 .access {
   margin: 228px auto 0 auto;
 }
 
+/*横幅480px以下の時のセクションAccess*/
+@media screen and (max-width: 480px) {
+  .access {
+    margin-top: 128px;
+  }
+}
+
+/*セクションAccessの見出し*/
 .access-header h2 {
   position: relative;
 }
 
+/*見出しの下のボーダー(疑似要素)*/
 .access-header h2::after {
   content: '';
   position: absolute;
@@ -680,65 +720,163 @@ time {
   left: 0; /*下線の起点*/
 }
 
+/*横幅480px以下の時のボーダー*/
+@media screen and (max-width: 480px) {
+  .access-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /*下線の位置(margin-topの役割)*/
+    display: inline-block;
+    width: 69px; /*下線の横幅*/
+    height: 5px; /*下線の縦幅*/
+    background-color: #0A0A0A; /*下線の色*/
+    left: 0; /*下線の起点*/
+  }
+}
+
+/*見出しの下のふりがな*/
 .access-header p {
   margin-top: 50px;
 }
 
+/*横幅480px以下の時の見出しの下のふりがな*/
+@media screen and (max-width: 480px) {
+  .access-header p {
+    margin-top: 19px;
+  }
+}
+
+/*セクションAccessのコンテンツ*/
 .access-contents {
   display: flex;
   justify-content: space-between;
   margin-top: 98px;
 }
 
+/*横幅480px以下の時のセクションAccessのコンテンツ*/
+@media screen and (max-width: 480px) {
+  .access-contents {
+    flex-direction: column;/*説明文と写真を縦並びにする*/
+    margin-top: 42px;
+  }
+}
+
+/*各コンテンツの見出しみたいなもの*/
 .about-shop dd {
   font-family: 'Montserrat',sans-serif;
   font-size: 24px;
 }
 
-.about-shop dt {
-  font-size: 16px;
+/*横幅480px以下の時の各コンテンツの見出しみたいなもの*/
+@media screen and (max-width: 480px) {
+  .about-shop dd {
+    font-size: 5vw;
+  }
 }
 
+/*各コンテンツ見出しの下の説明*/
+.about-shop dt {
+  font-size: 3vw;
+}
+
+/*横幅480px以下の時の各コンテンツ見出しの下の説明*/
+@media screen and (max-width: 480px) {
+  .about-shop dt {
+    font-size: 12px;
+  }
+}
+
+/*ADRESS説明*/
 .address dt {
   margin-top: 15px;
 }
 
+/*横幅480px以下の時の各コンテンツ見出しの下の説明*/
+@media screen and (max-width: 480px) {
+  .address,.tel,.on-time,.off-time dt {
+    margin-top: 6px;
+  }
+}
+
+/*見出しTEL*/
 .tel dd {
   margin-top: 33px;
 }
 
+/*横幅480px以下の時のTEL以下の見出し*/
+@media screen and (max-width: 480px) {
+  .tel,.on-time,.off-time dd {
+    margin-top: 22px;
+  }
+}
+
+/*電話番号*/
 .tel dt {
   margin-top: 7px;
 }
 
+/*見出しON TIME*/
 .on-time dd {
   margin-top: 22px;
 }
 
+/*平日*/
 .on-time dt {
   margin-top: 7px;
 }
 
+/*見出しOFF TIME*/
 .off-time dd {
   margin-top: 33px;
 }
 
+/*土曜日曜祝日*/
 .off-time dt {
   margin-top: 10px;
 }
 
+/*地図のコンテナ*/
+.map div {
+  width: auto;
+}
+
+/*地図の中身*/
+.map iframe {
+  max-width: 100%;/*画像のフルードイメージ化*/
+}
+
+/*横幅480px以下の時の地図の中身*/
+@media screen and (max-width: 480px) {
+  .map iframe {
+    margin-top: 60px;
+  }
+}
+
+/*道順の説明*/
 .route {
   margin: 147px auto;
 }
 
+/*道順の説明の見出し的なもの*/
 .route dt {
   font-size: 24px;
+  font-weight: bold;
 }
 
+/*道順の説明文*/
 .route li {
   margin-top: 28px;
+  font-size: 16px;
 }
 
+/*横幅480px以下の時の道順の説明文*/
+@media screen and (max-width: 480px) {
+  .route li {
+    margin-top: 37px;
+  }
+}
+
+/*一番下のフッターのコンテナ*/
 footer {
   margin-top: 179px;
   background-color: #262626;
@@ -747,6 +885,15 @@ footer {
   bottom: 0;
 }
 
+/*横幅480px以下の時のフッターのコンテナ*/
+@media screen and (max-width: 480px) {
+  footer {
+    margin-top: 92px;
+    height: 182px;
+  }
+}
+
+/*LOGOLOGO*/
 .footer-logo div {
   font-size: 80px;
   letter-spacing: 40px;
@@ -754,4 +901,13 @@ footer {
   color: #FFFFFF;
   padding-top: 77px;
   text-align: center;
+}
+
+/*横幅480px以下の時のLOGOLOGO*/
+@media screen and (max-width: 480px) {
+  .footer-logo div {
+    font-size: 11vw;
+    letter-spacing: 5vw;
+    padding-top: 70px;
+  }
 }

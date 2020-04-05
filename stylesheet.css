@@ -452,7 +452,7 @@ h2 {
     background-image: url("img/various-cosme.jpg");
     /*position初期化*/
     position: static;
-    width: 129vw;
+    width: 100%;
   }
 }
 
@@ -616,20 +616,21 @@ tr:not(:last-child) {
 /*セクションBlog全体のコンテンツ*/
 .articles {
   margin-top: 60px;
+  /*親要素にflexを設定する*/
   display: flex;
+}
+/*親要素articles、子要素blog-articles
+(blog-articlesは1つひとつのコンテンツ)*/
+.articles,.blog-article {
+  /*コンテンツを横並びにする*/
   justify-content: space-between;
 }
 
 /*横幅480px以下の時のセクションBlog全体のコンテンツ
 (修正予定)*/
 @media screen and (max-width: 480px) {
-  .articles {
-    /*グリッドレイアウトの表示形式を指定*/
-    display: grid;
-    /*4分割定義*/
-    grid-template-columns: repeat(4, 1fr);
-    /**/
-    grid-gap: 30px;
+  .articles,.blog-article {
+    flex-wrap: wrap;
   }
 }
 

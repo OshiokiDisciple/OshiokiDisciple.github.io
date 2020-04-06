@@ -52,11 +52,27 @@ li {
   width: 100%;
 }
 
+/*横幅480px以下の時のメインビジュアル*/
+@media screen and (max-width: 480px) {
+  .total-contents {
+    height: 673px;
+  }
+}
+
 /*LogoLOGOやメニュー*/
 header {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+/*ハンバーガーボタンのガワ*/
+.hbg-btn {
+  float: right;
+  /*正方形にしたい*/
+  width: 21vw;
+  height: 21vw;
+  background-color: #FFFFFF
 }
 
 /*メインビジュアル左半分*/
@@ -81,22 +97,49 @@ header {
   font-weight: bold;
 }
 
-/*メインビジュアルのメニュー*/
+/*メインビジュアルのメニュー全体*/
 nav {
   margin-top: 28px;
 }
 
+/*横幅480px以下の時のメニュー*/
+@media screen and (max-width: 480px) {
+  nav {
+    margin-top: 0;
+    left: 23vw;
+    width: 81vw;
+    height: 673px;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.95);
+  }
+}
 
+/*横幅480px以下の時バツ印出す*/
+@media screen and (max-width: 480px) {
+  .X-mark {
+    display: inline-block;
+
+  }
+}
+
+/*横幅480px以下の時のメニュー*/
+@media screen and (max-width: 480px) {
+  .header-right ul {
+    margin: 88px 53vw 276px 11vw;
+  }
+}
+
+/*1つひとつのメニュー*/
 .header-right li {
   display: inline-block;
   margin: 0 35px;
 }
 
-/*横幅801px以下の時のAwesome Cosmetic*/
-@media screen and (max-width: 801px) {
+/*横幅480px以下の時の1つひとつのメニュー*/
+@media screen and (max-width: 480px) {
   .header-right li {
     flex-direction: column;
-    margin: 0 35px;
+    margin: 15px 0 15px 0;
   }
 }
 
@@ -640,6 +683,7 @@ tr:not(:last-child) {
   .articles,.blog-article-1,.blog-article-2,.blog-articles-3 {
     justify-content: space-between;
     flex-wrap: wrap;
+    width :45%;
   }
 }
 
@@ -654,7 +698,6 @@ tr:not(:last-child) {
 /*横幅480px以下の時の上2つのコンテンツ*/
 @media screen and (max-width: 480px) {
   .blog-article-1,.blog-article-2 {
-    width :45%;
     margin-top: 73px;
   }
 }

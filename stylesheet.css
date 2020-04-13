@@ -676,9 +676,17 @@ tr:not(:last-child) {
 }
 
 .blog-articles {
-  /*1つひとつのコンテンツの横幅設定（しかし等間隔に配置できない）*/
-  width: 25%;
+  /*1つひとつのコンテンツの横幅設定*/
+  width: 324px;
 }
+
+/*横幅481px以上の時の4つ目のブログ記事*/
+@media screen and (min-width: 481px) {
+  .invisible-article {
+    display: none;
+  }
+}
+
 
 /*横幅480px以下の時の親要素articles、子要素blog-articles*/
 @media screen and (max-width: 480px) {
@@ -692,7 +700,7 @@ tr:not(:last-child) {
 @media screen and (max-width: 480px) {
   .blog-articles {
     /*1つひとつのコンテンツの横幅設定（しかし等間隔に配置できない）*/
-    width: 50%;
+    width: 45%;
   }
 }
 
@@ -709,19 +717,6 @@ tr:not(:last-child) {
   margin-bottom: 29px;
   max-width: 100%; /*imgのフルード化*/
   height: auto; /*imgのフルード化*/
-}
-
-/*横幅480px以下の時の上2つのコンテンツ
-  margin-top: 73px;*/
-@media screen and (max-width: 480px) {
-  .blog-article-1,.blog-article-2 {
-  }
-}
-
-/*横幅480px以下の時の下1つのコンテンツmargin-top: 30px;*/
-@media screen and (max-width: 480px) {
-  .blog-article-3 {
-  }
 }
 
 /*コンテンツ下の日付*/

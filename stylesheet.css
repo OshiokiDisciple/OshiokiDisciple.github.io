@@ -67,12 +67,14 @@ header {
 }
 
 /*ハンバーガーボタンのガワ*/
-.hbg-btn {
-  float: right;
-  /*正方形にしたい*/
-  width: 21vw;
-  height: 21vw;
-  background-color: #FFFFFF
+@media screen and (max-width: 480px) {
+  .hbg-btn {
+    float: right;
+    /*正方形にしたい*/
+    width: 21vw;
+    height: 21vw;
+    background-color: #FFFFFF
+  }
 }
 
 /*メインビジュアル左半分*/

@@ -249,8 +249,9 @@ a:hover::after {
   margin: 186px auto 0 auto;
   display: flex;
   justify-content: space-between;
-  /*親要素にalign-items: center;と書くことで、女性の写真を配置する*/
+  /*親要素にalign-items: center;と書くことで、女性の写真を横に配置する*/
   -webkit-align-items: center;
+  /*Aboutボックスに対して縦に等間隔に写真配置*/
   align-items: center;
 }
 
@@ -671,21 +672,34 @@ tr:not(:last-child) {
   margin-top: 60px;
   /*親要素にflexを設定する*/
   display: flex;
+  justify-content: space-between;
 }
 
-/*親要素articles、子要素blog-articles
-(blog-articlesは1つひとつのコンテンツ)*/
-.articles,.blog-article-1,.blog-article-2.blog-article-3 {
-  /*コンテンツを横並びにする*/
-  justify-content: space-between;
+.blog-articles {
+  /*1つひとつのコンテンツの横幅設定（しかし等間隔に配置できない）*/
+  width: 25%;
 }
 
 /*横幅480px以下の時の親要素articles、子要素blog-articles*/
 @media screen and (max-width: 480px) {
-  .articles,.blog-article-1,.blog-article-2,.blog-articles-3 {
-    justify-content: space-between;
+  .articles {
+    flex-direction: row;
     flex-wrap: wrap;
-    width :45%;
+  }
+}
+
+/*横幅480px以下の時の子要素blog-articles*/
+@media screen and (max-width: 480px) {
+  .blog-articles {
+    /*1つひとつのコンテンツの横幅設定（しかし等間隔に配置できない）*/
+    width: 50%;
+  }
+}
+
+/*横幅480px以下の時の子要素blog-articles*/
+@media screen and (max-width: 480px) {
+  .bottom-article {
+    margin-top: 30px;
   }
 }
 
@@ -697,17 +711,16 @@ tr:not(:last-child) {
   height: auto; /*imgのフルード化*/
 }
 
-/*横幅480px以下の時の上2つのコンテンツ*/
+/*横幅480px以下の時の上2つのコンテンツ
+  margin-top: 73px;*/
 @media screen and (max-width: 480px) {
   .blog-article-1,.blog-article-2 {
-    margin-top: 73px;
   }
 }
 
-/*横幅480px以下の時の下1つのコンテンツ*/
+/*横幅480px以下の時の下1つのコンテンツmargin-top: 30px;*/
 @media screen and (max-width: 480px) {
   .blog-article-3 {
-    margin-top: 30px;
   }
 }
 

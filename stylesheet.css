@@ -709,6 +709,7 @@ tr:not(:last-child) {
   .blog-article-3 {
     margin-top: 30px;
   }
+}
 
 /*コンテンツ下の日付*/
 time {

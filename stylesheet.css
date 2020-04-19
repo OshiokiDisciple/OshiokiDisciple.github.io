@@ -66,6 +66,11 @@ header {
   width: 100%;
 }
 
+/*ハンバーガーボタンのガワ(普段は隠す)*/
+.hbg-btn {
+  display: none;
+}
+
 /*ハンバーガーボタンのガワ*/
 @media screen and (max-width: 480px) {
   .hbg-btn {
@@ -677,7 +682,14 @@ tr:not(:last-child) {
 
 .blog-articles {
   /*1つひとつのコンテンツの横幅設定*/
-  width: 324px;
+  width: 50%;
+}
+
+/*横幅480px以下の時の写真の横幅*/
+@media screen and (max-width: 480px) {
+  .blog-photo {
+    max-width: auto;
+  }
 }
 
 /*横幅481px以上の時の4つ目のブログ記事*/
@@ -686,7 +698,6 @@ tr:not(:last-child) {
     display: none;
   }
 }
-
 
 /*横幅480px以下の時の親要素articles、子要素blog-articles*/
 @media screen and (max-width: 480px) {

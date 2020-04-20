@@ -31,10 +31,16 @@ time, mark, audio, video {
 
 html {
   height: 100%;
+  /*いったんベースサイズを10pxにする
+  （例: 10px=1rem*/
+  font-size: 62.5%;
 }
 
 body {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", sans-serif;
+  /*ベースサイズを16pxに戻す
+  16px=1.6rem*/
+  font-size: 1.6rem;
   margin: 0;
   height: 100%;
 }
@@ -55,7 +61,7 @@ li {
 /*横幅480px以下の時のメインビジュアル*/
 @media screen and (max-width: 480px) {
   .total-contents {
-    height: 673px;
+    height: 100%;
   }
 }
 
@@ -66,19 +72,24 @@ header {
   width: 100%;
 }
 
-/*ハンバーガーボタンのガワ(普段は隠す)*/
 .hbg-btn {
-  display: none;
+  position: absolute;
+  width: 21vw;
+  top: 0;
+  right: -21vw;
+  height: 21vh;
 }
 
 /*ハンバーガーボタンのガワ*/
 @media screen and (max-width: 480px) {
   .hbg-btn {
-    float: right;
+    top: 0;
+    right: 0;
     /*正方形にしたい*/
     width: 21vw;
     height: 21vw;
-    background-color: #FFFFFF
+    background-color: red;
+    z-index: 100;
   }
 }
 
@@ -91,7 +102,7 @@ header {
 /*LogoLOGO*/
 .header-left div {
   font-family: 'Montserrat',sans-serif;
-　font-size: 20px;
+　font-size: 20px;/*固定*/
   letter-spacing: 10px;
   font-weight: bold;
 }
@@ -99,7 +110,7 @@ header {
 /*コスメです*/
 .header-left p {
   margin-bottom: 6px;
-  font-size: 12px;
+  font-size: 12px;/*固定*/
   letter-spacing: 6px;
   font-weight: bold;
 }
@@ -113,9 +124,8 @@ nav {
 @media screen and (max-width: 480px) {
   nav {
     margin-top: 0;
-    left: 23vw;
-    width: 81vw;
-    height: 673px;
+    width: 81%;
+    height: 100%;
     z-index: 2;
     background-color: rgba(255,255,255,0.95);
   }
@@ -132,12 +142,14 @@ nav {
 /*横幅480px以下の時のメニュー*/
 @media screen and (max-width: 480px) {
   .header-right ul {
-    margin: 88px 53vw 276px 11vw;
+    margin-bottom: 100%;
   }
 }
 
 /*1つひとつのメニュー*/
 .header-right li {
+  font-size: 18px;/*PC版の時は18pxで固定*/
+  font-size: calc(1.8rem + ((1vw - 0.3rem) * 0.6667));/*18px～24pxの間で可変*/
   display: inline-block;
   margin: 0 35px;
 }
@@ -146,7 +158,7 @@ nav {
 @media screen and (max-width: 480px) {
   .header-right li {
     flex-direction: column;
-    margin: 15px 0 15px 0;
+    margin: 15% 65% 15% 13%;
   }
 }
 
@@ -158,7 +170,7 @@ nav {
 /*メニュークリックしたときに出るボーダーの疑似要素*/
 a::before,
 a::after {
-  border-bottom: 8px solid #0A0A0A;
+  border-bottom: 8px solid #000000;
   bottom: -8px;
   content: '';
   display: block;
@@ -193,7 +205,8 @@ a:hover::after {
 /*Awesome Cosmetic*/
 .title h1 {
   font-family: 'Montserrat',sans-serif;
-  font-size: 64px;
+  font-size: 64px;/*PC版の時64pxで固定*/
+  font-size: calc(4rem + ((1vw - 0.3rem) * 2.6667));/*40px~64pxで可変*/
   margin-bottom: 40px;
   font-weight: bold;
 }
@@ -201,35 +214,30 @@ a:hover::after {
 /*横幅480px以下の時のAwesome Cosmetic*/
 @media screen and (max-width: 480px) {
   .title h1 {
-    font-size: 11vw;
-    margin-bottom: 5vh;
+    margin-bottom: 5％;
   }
 }
 
 /*サブタイトル*/
 .title p {
   color: #FFFFFF;
-  font-size: 24px;
+  font-size: 24px;/*PC版*/
+  font-size: calc(1.6rem + ((1vw - 0.3rem) * 0.8889));/*16px~24pxで可変*/
+  /*文字の間隔 PC版の時は12pxで固定*/
   letter-spacing: 12px;
+  /*8px~12pxの間で可変*/
+  letter-spacing: calc(0.8rem + ((1vw - 0.3rem) * 0.4444));
   font-weight: bold;
-}
-
-/*横幅480px以下の時のサブタイトル*/
-@media screen and (max-width: 480px) {
-  .title p {
-    font-size: 4vw;
-    letter-spacing: 2vw;
-  }
 }
 
 /*メインビジュアルの矢印*/
 .arrow {
   border: 5px solid;
-  border-color: transparent transparent #FFFFFF #FFFFFF;
+  border-color: transparent transparent #FFFFFF #ffffff;
   width: 37px;
   height: 37px;
   position: absolute;
-  top: 721px;
+  top: 90%;
   left: 50%;/*左から見て真ん中の位置に配置*/
   -webkit-transform: translateX(-50%) rotate(-45deg);
   transform: translateX(-50%) rotate(-45deg);
@@ -245,7 +253,7 @@ a:hover::after {
 @media screen and (max-width: 480px) {
   .about,.item,.price,.blog,.access {
     width: auto;/*可変幅*/
-    padding: 0 5vw;/*内側に間隔をあけるため*/
+    padding: 0 5px;/*内側に間隔をあけるため*/
   }
 }
 
@@ -286,17 +294,9 @@ a:hover::after {
 /*各セクションの見出し*/
 h2 {
   font-family: 'Montserrat',sans-serif;
-  font-size: 48px;
-  /*h2をブロック要素にしてたから
-  text-align: center;で中央に寄らなかった*/
+  font-size: 48px;/*PC版固定*/
+  font-size: calc(3.8rem + ((1vw - 0.3rem) * 1.1111));/*38px~48pxで可変*/
   font-weight: bold;
-}
-
-/*横幅480px以下の時の各セクションの見出し*/
-@media screen and (max-width: 480px) {
-  h2 {
-    font-size: 10vw;
-  }
 }
 
 /*About*/
@@ -319,15 +319,9 @@ h2 {
 
 /*見出しの下の一文*/
 .about-box,.item-logo,.price-table,.blog-header,.access-header p {
-  font-size: 16px;
+  font-size: 16px;/*PC版固定*/
+  font-size: calc(1.2rem + ((1vw - 0.3rem) * 0.4444));/*12px~16pxで可変*/
   font-weight: bold;
-}
-
-/*横幅480px以下の時の各セクションの見出しの下のフォントサイズ*/
-@media screen and (max-width: 480px) {
-  .about-box,.item-logo,.price-table,.blog-header,.access-header p {
-    font-size: 3vw;
-  }
 }
 
 /*こだわり*/
@@ -344,7 +338,8 @@ h2 {
 
 /*コスメについて*/
 .about-cosme dt {
-  font-size: 24px;
+  font-size: 24px;/*PC版固定*/
+  font-size: calc(2rem + ((1vw - 0.3rem) * 0.4444));/*20px~24pxで可変*/
   margin: 25px 0 0 57px;
 }
 
@@ -357,27 +352,27 @@ h2 {
 
 /*私たちのこだわり*/
 .about-cosme dd {
-  font-size: 16px;
+  font-size: 16px;/*PC版固定*/
+  font-size: calc(1.2rem + ((1vw - 0.3rem) * 0.4444));/*12px~16pxで可変*/
   margin: 41px 53px 32px 60px;
   font-weight: normal;
 }
 
-/*横幅480px以下の時の”私たちのこだわり”のフォントサイズ*/
+/*横幅480px以下の時の”私たちのこだわり”*/
 @media screen and (max-width: 480px) {
   .about-cosme dd {
-    font-size: 3vw;
     margin-top: 20px;
   }
 }
 
 /*写真のコンテナ*/
 .about-photo figure {
-  width: auto;
+  width: 100％;
 }
 
 /*Aboutの女性の写真*/
 .about-photo img {
-  max-width: 100%;/*画像のフルードイメージ化*/
+  width: 100%;/*画像のフルードイメージ化*/
 }
 
 /*セクション"item"*/
@@ -432,6 +427,7 @@ h2 {
 @media screen and (max-width: 480px) {
   .items {
     flex-direction: column;
+    margin: 0;
   }
 }
 
@@ -440,15 +436,19 @@ h2 {
   /*親要素class itemsにjustify-content: space-between;を
   設定してるので1つひとつのコンテンツの横幅を設定することで
   自動的に割り振られる*/
-  width: 324px;
+  width: 321px;
+}
+
+/*Itemのコンテンツの写真*/
+.item-photo img {
+  width: 100%; /*imgのフルード化*/
 }
 
 /*横幅480px以下の時のItemの1つずつのコンテンツ*/
 @media screen and (max-width: 480px) {
   .item-info {
-  /*コンテンツを横いっぱいに広げる*/
     width: 100%;
-    margin: 23px auto 0;
+    margin-top: 23px;
   }
 }
 
@@ -456,6 +456,7 @@ h2 {
 .item-info p {
   font-family: 'Montserrat',sans-serif;
   font-size: 16px;
+  font-size: calc(1.2rem + ((1vw - 0.3rem) * 0.4444));/*12px~16pxで可変*/
   font-weight: bold;
   letter-spacing: 3px;
   margin-top: 39px;
@@ -476,19 +477,10 @@ h2 {
   margin-top: 12px;
 }
 
-/*Itemのコンテンツの写真のコンテナ*/
-.item-photo figure {
-  width: 324px;
-}
-
-/*Itemのコンテンツの写真*/
-.item-photo img {
-  max-width: 100%; /*imgのフルード化*/
-}
-
 /*Itemコンテンツ 商品の説明文*/
 .description-1,.description-2,.description-3 {
   font-size: 16px;
+  font-size: calc(1.2rem + ((1vw - 0.3rem) * 0.4444));/*12px~16pxで可変*/
   margin-top: 30px;
 }
 
@@ -527,8 +519,8 @@ h2 {
 @media screen and (max-width: 480px) {
   .price-table {
     /*上下は数字指定、左右はauto指定*/
-    margin: 48px 0 49px 0;
-    width: 90vw;
+    margin: 48px 5% 49px 5%;
+    width: 90%;
     background-color: rgba(255,255,255,0.9);
   }
 }
@@ -680,16 +672,28 @@ tr:not(:last-child) {
   justify-content: space-between;
 }
 
-.blog-articles {
-  /*1つひとつのコンテンツの横幅設定*/
-  width: 50%;
+/*横幅480px以下の時の親要素articles*/
+@media screen and (max-width: 480px) {
+  .articles {
+    flex-wrap: wrap;
+  }
 }
 
-/*横幅480px以下の時の写真の横幅*/
+.blog-articles {
+  width: 324px;
+}
+
+/*横幅480px以下の時のブログ欄のコンテナ*/
 @media screen and (max-width: 480px) {
-  .blog-photo {
-    max-width: auto;
+.blog-articles {
+    width: 45%;
   }
+}
+
+/*コンテンツの写真*/
+.blog-photo img {
+  margin-bottom: 29px;
+  width: 100%; /*imgのフルード化*/
 }
 
 /*横幅481px以上の時の4つ目のブログ記事*/
@@ -699,35 +703,11 @@ tr:not(:last-child) {
   }
 }
 
-/*横幅480px以下の時の親要素articles、子要素blog-articles*/
-@media screen and (max-width: 480px) {
-  .articles {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-/*横幅480px以下の時の子要素blog-articles*/
-@media screen and (max-width: 480px) {
-  .blog-articles {
-    /*1つひとつのコンテンツの横幅設定（しかし等間隔に配置できない）*/
-    width: 45%;
-  }
-}
-
 /*横幅480px以下の時の子要素blog-articles*/
 @media screen and (max-width: 480px) {
   .bottom-article {
     margin-top: 30px;
   }
-}
-
-/*コンテンツの写真*/
-.blog-photo {
-  width: 324px;/*横幅指定*/
-  margin-bottom: 29px;
-  max-width: 100%; /*imgのフルード化*/
-  height: auto; /*imgのフルード化*/
 }
 
 /*コンテンツ下の日付*/
@@ -841,7 +821,7 @@ time {
 
 /*各コンテンツ見出しの下の説明*/
 .about-shop dt {
-  font-size: 3vw;
+  font-size: 16px;
 }
 
 /*横幅480px以下の時の各コンテンツ見出しの下の説明*/
@@ -900,14 +880,8 @@ time {
   margin-top: 10px;
 }
 
-/*地図のコンテナ*/
 .map div {
-  width: auto;
-}
-
-/*地図の中身*/
-.map iframe {
-  max-width: 100%;/*画像のフルードイメージ化*/
+  width: 664px;
 }
 
 /*横幅480px以下の時の地図の中身*/
@@ -953,6 +927,7 @@ footer {
 /*横幅480px以下の時のフッターのコンテナ*/
 @media screen and (max-width: 480px) {
   footer {
+    width: 100%;
     margin-top: 92px;
     height: 182px;
   }
@@ -960,19 +935,24 @@ footer {
 
 /*LOGOLOGO*/
 .footer-logo div {
+  /*文字サイズ PC版は80pxで固定*/
   font-size: 80px;
+  /*文字サイズ40px~80pxで可変*/
+  font-size: calc(4rem + ((1vw - 0.3rem) * 4.4444));
+  /*文字の間隔 PC版は40pxで固定*/
   letter-spacing: 40px;
+  /*文字の間隔 20px~40pxで可変*/
+  letter-spacing: calc(2rem + ((1vw - 0.3rem) * 2.2222));
   font-family: 'Montserrat',sans-serif;
   color: #FFFFFF;
   padding-top: 77px;
   text-align: center;
+  margin: 0 auto 0 auto;
 }
 
 /*横幅480px以下の時のLOGOLOGO*/
 @media screen and (max-width: 480px) {
   .footer-logo div {
-    font-size: 11vw;
-    letter-spacing: 5vw;
     padding-top: 70px;
   }
 }

@@ -886,6 +886,13 @@ time {
 
 /*横幅480px以下の時の地図の中身*/
 @media screen and (max-width: 480px) {
+  .map div {
+    width: 100%;
+  }
+}
+
+/*横幅480px以下の時の地図の中身*/
+@media screen and (max-width: 480px) {
   .map iframe {
     margin-top: 60px;
   }

@@ -894,6 +894,7 @@ time {
 /*横幅480px以下の時の地図の中身*/
 @media screen and (max-width: 480px) {
   .map iframe {
+    width: 100%;
     margin-top: 60px;
   }
 }
@@ -946,20 +947,15 @@ footer {
   font-size: 80px;
   /*文字サイズ40px~80pxで可変*/
   font-size: calc(4rem + ((1vw - 0.3rem) * 4.4444));
-  /*文字の間隔 PC版は40pxで固定*/
-  letter-spacing: 40px;
-  /*文字の間隔 20px~40pxで可変*/
-  letter-spacing: calc(2rem + ((1vw - 0.3rem) * 2.2222));
   font-family: 'Montserrat',sans-serif;
   color: #FFFFFF;
-  padding-top: 77px;
   text-align: center;
-  margin: 0 auto 0 auto;
+  padding: 70px 0 70px 0;
 }
 
 /*横幅480px以下の時のLOGOLOGO*/
 @media screen and (max-width: 480px) {
   .footer-logo div {
-    padding-top: 70px;
+    font-size: 40px;
   }
 }

@@ -58,13 +58,6 @@ li {
   width: 100%;
 }
 
-/*横幅480px以下の時のメインビジュアル*/
-@media screen and (max-width: 480px) {
-  .total-contents {
-    height: 100%;
-  }
-}
-
 /*LogoLOGOやメニュー*/
 header {
   display: flex;
@@ -72,25 +65,90 @@ header {
   width: 100%;
 }
 
+/*PC版の時のハンバーガーボタン*/
 .hbg-btn {
   position: absolute;
-  width: 21vw;
   top: 0;
-  right: -21vw;
-  height: 21vh;
+  /*正方形にしたい*/
+  width: 21%;
+  height: 10%;
+  /*横幅と同じだけ右にずらし、画面から消す*/
+  right: -21%;
+  background-color: #FFFFFF;
+  z-index: 100;
 }
 
 /*ハンバーガーボタンのガワ*/
 @media screen and (max-width: 480px) {
   .hbg-btn {
-    top: 0;
     right: 0;
-    /*正方形にしたい*/
-    width: 21vw;
-    height: 21vw;
-    background-color: red;
-    z-index: 100;
   }
+}
+
+/*ハンバーガーボタンの3本線(一番目)*/
+.hbg-line-1 {
+  position: absolute;
+  top: 33%;
+  right: 27%;
+  width: 43%;
+  height: 3px;
+  background-color: #101010;
+}
+
+/*ハンバーガーボタンの3本線(二番目)*/
+.hbg-line-2 {
+  position: absolute;
+  top: 50%;
+  right: 27%;
+  width: 43%;
+  height: 3px;
+  background-color: #101010;
+}
+
+/*ハンバーガーボタンの3本線(三番目)*/
+.hbg-line-3 {
+  position: absolute;
+  top: 67%;
+  right: 27%;
+  width: 43%;
+  height: 3px;
+  background-color: #101010;
+}
+
+/*ハンバーガーボタンがクリックされたら
+1番上の線を真ん中に移動させ、45度回転*/
+.hbg-line-1.open {
+  position: absolute;
+  top: 50%;
+  right: 27%;
+  width: 43%;
+  height: 3px;
+  background-color: #101010;
+  transform: rotate(45deg);
+}
+
+/*ハンバーガーボタンがクリックされたら
+真ん中の線を透明に*/
+.hbg-line-1.open {
+  position: absolute;
+  top: 50%;
+  right: 27%;
+  width: 43%;
+  height: 3px;
+  background-color: #101010;
+  opacity: 0;
+}
+
+/*ハンバーガーボタンがクリックされたら
+1番下の線を真ん中に移動させ、-45度回転*/
+.hbg-line-1.open {
+  position: absolute;
+  top: 50%;
+  right: 27%;
+  width: 43%;
+  height: 3px;
+  background-color: #101010;
+  transform: rotate(-45deg);
 }
 
 /*メインビジュアル左半分*/
@@ -123,26 +181,13 @@ nav {
 /*横幅480px以下の時のメニュー*/
 @media screen and (max-width: 480px) {
   nav {
+    position: fixed;
     margin-top: 0;
+    top: 0;
+    right: -81%;
     width: 81%;
-    height: 100%;
     z-index: 2;
     background-color: rgba(255,255,255,0.95);
-  }
-}
-
-/*横幅480px以下の時バツ印出す*/
-@media screen and (max-width: 480px) {
-  .X-mark {
-    display: inline-block;
-
-  }
-}
-
-/*横幅480px以下の時のメニュー*/
-@media screen and (max-width: 480px) {
-  .header-right ul {
-    margin-bottom: 100%;
   }
 }
 
@@ -151,14 +196,14 @@ nav {
   font-size: 18px;/*PC版の時は18pxで固定*/
   font-size: calc(1.8rem + ((1vw - 0.3rem) * 0.6667));/*18px～24pxの間で可変*/
   display: inline-block;
-  margin: 0 35px;
+  margin: 0  35px;
 }
 
 /*横幅480px以下の時の1つひとつのメニュー*/
 @media screen and (max-width: 480px) {
   .header-right li {
     flex-direction: column;
-    margin: 15% 65% 15% 13%;
+    margin: 30% 65% 15% 16%;
   }
 }
 
@@ -198,8 +243,8 @@ a:hover::after {
 /*Awesome Cosmeticとサブタイトル*/
 .title {
   position: absolute;
-  top: 40vh;
-  left: 11vw;
+  top: 40%;
+  left: 11%;
 }
 
 /*Awesome Cosmetic*/
@@ -237,7 +282,7 @@ a:hover::after {
   width: 37px;
   height: 37px;
   position: absolute;
-  top: 90%;
+  top: 87%;
   left: 50%;/*左から見て真ん中の位置に配置*/
   -webkit-transform: translateX(-50%) rotate(-45deg);
   transform: translateX(-50%) rotate(-45deg);
@@ -253,7 +298,7 @@ a:hover::after {
 @media screen and (max-width: 480px) {
   .about,.item,.price,.blog,.access {
     width: auto;/*可変幅*/
-    padding: 0 5px;/*内側に間隔をあけるため*/
+    padding: 0 1%;
   }
 }
 
@@ -462,13 +507,6 @@ h2 {
   margin-top: 39px;
 }
 
-/*横幅480px以下の時のItemのコンテンツ*/
-@media screen and (max-width: 480px) {
-  .item-info p, .description-1,.description-2,.description-3 {
-    font-size: 3vw;
-  }
-}
-
 /*商品名*/
 .item-info dt {
   font-family: 'Montserrat',sans-serif;
@@ -503,7 +541,7 @@ h2 {
     background-image: url("img/various-cosme.jpg");
     /*position初期化*/
     position: static;
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -519,8 +557,8 @@ h2 {
 @media screen and (max-width: 480px) {
   .price-table {
     /*上下は数字指定、左右はauto指定*/
-    margin: 48px 5% 49px 5%;
-    width: 90%;
+    margin: 48px 0;
+    width: 98%;
     background-color: rgba(255,255,255,0.9);
   }
 }
@@ -575,7 +613,7 @@ h2 {
 /*横幅480px以下の時のmenu*/
 @media screen and (max-width: 480px) {
   .menu {
-    width: 59vw;
+    width: 59%;
   }
 }
 
@@ -606,13 +644,13 @@ tr:not(:last-child) {
   border-bottom: 1px dashed #000000;
 }
 
-/*料金表の写真の部分*/
+/*料金表の写真のコンテナ*/
 .cosmes-photo {
   position: absolute;
   top: 93px;
   left: 330px;
   z-index: -1;
-  max-width: 100%; /*imgのフルード化*/
+  width: 100%;
 }
 
 /*横幅480px以下の時のItemのコンテンツ*/
@@ -950,7 +988,7 @@ footer {
   font-family: 'Montserrat',sans-serif;
   color: #FFFFFF;
   text-align: center;
-  padding: 70px 0 70px 0;
+  padding: 12% 0 0 0;
 }
 
 /*横幅480px以下の時のLOGOLOGO*/
